@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+</head>
+<style>
+    .box {
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 5px #555;
+    }
+    
+    .box img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .box .box-heading {
+        width: 90%;
+        position: absolute;
+        bottom: 25px;
+        left: 5%;
+        background: rgba(7, 185, 244, 0.6);
+        padding: 10px 60px 10px 25px;
+        color: #fff;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .box:hover .box-heading {
+        left: 100%;
+    }
+    
+    .box .box-heading:after {
+        content: "";
+        font-family: fontawesome;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        top: 13px;
+        right: 11px;
+        background: #20211c;
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+    }
+    
+    .box .title {
+        margin: 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    
+    .box .post {
+        display: block;
+        font-size: 14px;
+        color: #fff;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+    
+    .box .boxContent {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        padding: 30px 35px;
+        background: rgba(7, 185, 244, 0.8);
+        transition: all 0.3s ease 0s;
+    }
+    
+    .box:hover .boxContent {
+        left: 0;
+    }
+    
+    .box .description {
+        font-size: 14px;
+        color: #fff;
+        line-height: 25px;
+    }
+    
+    .box .cart {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #20211c;
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-top: 20px;
+        transition: all 0.3s ease 0s;
+    }
+    
+    .box .cart:hover {
+        text-decoration: none;
+        background: #fff;
+        color: #3fc9f7;
+    }
+    
+    .box .cart i {
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10px;
+    }
+    
+    @media only screen and (max-width: 990px) {
+        .box {
+            margin-bottom: 20px;
+        }
+    }
+    
+    @media only screen and (max-width: 479px) {
+        .box .boxContent {
+            padding: 10px;
+        }
+        .box .cart {
+            margin-top: 10px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 align="center">Thời trang cho bé trai nhiều màu sắc ngộ nghĩnh</h1>
+            <div class="col-md-4 col-sm-6">
+                <div class="box"> <img src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/bootstrap_hover_effect5/images/doboafnuoicon_7.jpg" alt="">
+                    <div class="box-heading">
+                        <h3 class="title">Mẫu thiết kế 1</h3><span class="post">Giá: 200.000 đ</span>
+                    </div>
+                    <div class="boxContent">
+                        <p class="description"> Chúc con yêu của bạn có thêm những bộ đồ thời trang cho bé trai theo phong cách đa màu sắc cực xinh xắn và đáng yêu! </p><a href="http://hocwebgiare.com/" class="cart"><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="box"> <img src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/bootstrap_hover_effect5/images/doboafnuoicon_5.jpg" alt="">
+                    <div class="box-heading">
+                        <h3 class="title">Mẫu thiết kế 2</h3><span class="post">Giá: 200.000 đ</span>
+                    </div>
+                    <div class="boxContent">
+                        <p class="description"> Chúc con yêu của bạn có thêm những bộ đồ thời trang cho bé trai theo phong cách đa màu sắc cực xinh xắn và đáng yêu! </p><a href="http://hocwebgiare.com/" class="cart"><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="box"> <img src="http://hocwebgiare.com/thiet_ke_web_chuan_demo/bootstrap_hover_effect5/images/doboafnuoicon_4.jpg" alt="">
+                    <div class="box-heading">
+                        <h3 class="title">Mẫu thiết kế 3</h3><span class="post">Giá: 200.000 đ</span>
+                    </div>
+                    <div class="boxContent">
+                        <p class="description"> Chúc con yêu của bạn có thêm những bộ đồ thời trang cho bé trai theo phong cách đa màu sắc cực xinh xắn và đáng yêu! </p><a href="http://hocwebgiare.com/" class="cart"><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
