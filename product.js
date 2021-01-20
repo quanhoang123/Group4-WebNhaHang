@@ -131,7 +131,7 @@ function listWatch() {
     for (let i in product) {
         var data = JSON.parse(JSON.stringify(product[i]))
         var prinf =
-            `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">										
+            ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">										
         <div class="produre_box bg-white shadow-sm ">										
             <div class="image_box imgs">										
                 <img src="` + data.img + `" style="width:260px; height:200px;">										
@@ -183,18 +183,13 @@ var getProduct = function(id) {
                 </p>
                 
                 
-                <a href="cart.html" class="cart"><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
+                <a href="" class="cart" ><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
             </div>
         </div>
     </div>           
     `;
 }
 
-function IcoinFunction() {
-    var x = document.getElementById("navbarCollapse");
-    if (x.className === "topNarbar") {
-        x.className += " responsive";
-    } else {
-        x.className = "topNarbar";
-    }
-}
+
+
+
