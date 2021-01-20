@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -29,19 +32,59 @@
     <link rel="stylesheet" href="styleHompage.css">
     <!-- link footer -->
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+
+
+    
     <title>HomePage</title>
 </head>
 
 <body>
     <header>
         <div class="head">
-            <nav class="navbar navbar-expand-xl navbar-fixed-top navbar-light bg-light " role="navigation" style="background: rgb(255, 186, 0);">
-                <div class="container-fluid ">
+            <nav class="navbar navbar-expand-xl navbar-fixed-top "role="navigation"  >
+                <div id="top-bar" class="header-top hide-for-sticky hide-for-medium">
+                    <div class="flex-row container">
+                        <div class="flex-col hide-for-medium float-left">
+                            <ul class="nav nav-left medium-nav-center nav-small  nav-divided" >
+                                <li class="html custom html_topbar_left" >
+                                    <span class="mona_html showroom"><a href=""> 101b Lê Hữu Trác, P.Phước Mỹ, Q.Sơn Trà, Tp.Da Nang</a></span>
+                                    <span class="mona_html hotline"><a href="tel:0355739816">035 573 9816</a></span>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div class="flex-col hide-for-medium flex-center">
+                            <ul class="nav nav-center nav-small  nav-divided">
+                            </ul>
+                        </div>
+
+                        <div class="flex-col hide-for-medium flex-right">
+                            <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+                                <li class="html header-social-icons ml-0">
+                                    <div class="social-icons follow-icons"><a href="http://url" target="_blank"
+                                            data-label="Facebook" rel="noopener noreferrer nofollow"
+                                            class="icon plain facebook tooltip" title="Follow on Facebook"><i
+                                                class="icon-facebook"></i></a><a href="http://url" target="_blank"
+                                            rel="noopener noreferrer nofollow" data-label="Instagram"
+                                            class="icon plain  instagram tooltip" title="Follow on Instagram"><i
+                                                class="icon-instagram"></i></a><a href="http://url" target="_blank"
+                                            data-label="Twitter" rel="noopener noreferrer nofollow"
+                                            class="icon plain  twitter tooltip" title="Follow on Twitter"><i
+                                                class="icon-twitter"></i></a></div>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="container">
                     <div class="navbar-header ">
                         <img src="">
-                        <a class="navbar-brand" href="">Group4-Restaurent</a>
+                        <a class="navbar-brand" href="">Group4-Restaurant</a>
                     </div>
-                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false" style="height: 1px;" style="color:black">
+                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false" style="height: 1px;" >
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#home">Home</a></li>
                             <li><a href="#aboutus">About us</a></li>
@@ -59,8 +102,7 @@
                             <li onclick="signin()"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                             <li onclick="singup()"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                             <li onclick="addProductOnCard()"><a href=""><span class="fas fa-card"></span>Card</a></li>
-                            <li> <a href="javascript:void(0);" class="icon" onclick="IcoinFunction()"><i class="fa fa-bars"></i></a></li>
-                            <!-- <script src="product.js"></script> -->
+                            <li> <a href="javascript:void(0);" class="icon" onclick="IcoinFunction()"><i class="fa fa-bars"></i></a></li>               
                         </ul>
                         <form class="navbar-form navbar-right" action="/action_page.php">
                             <div class="form-group">
@@ -68,13 +110,16 @@
                             </div>
                             <button type="submit" class="btn btn-default" onclick="searchProduct()">Search</button>
                         </form>
-
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-    <div class="contentHomePage" style="background:rgb(	255, 253, 208);">
+ 
+    
+    <div class="contentHomePage" >
+        <br>
+        <br>
         <br>
         <br>
         <div class="container-fluid" id="home">
@@ -88,15 +133,10 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="imgs/anhnen2.jpg" alt="Los Angeles" style="width:100%; height: 600px;">
+                        <img src="imgs/anhnen2.jpg" alt="Los Angeles" style="width:100%; height:1000px"">
                     </div>
-
                     <div class="item">
-                        <img src="imgs/anhnen.jpg" alt="Chicago" style="width:100%; height: 600px;">
-                    </div>
-
-                    <div class="item">
-                        <img src="imgs/anhnen1.jpg" alt="New York" style="width:100%; height: 600px;">
+                        <img src="imgs/anhnen1.jpg" alt="New York" style="width:100%; height:1000px">
                     </div>
                 </div>
                 <!-- Left and right controls -->
@@ -109,12 +149,19 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-            <div class="container product">
-                <div class="h3 mb-5">TRENDING FOOD</div>
-                <div class="row" id="trending">
+                <div class="container product">
+                    <div class="h3 mb-5" style="width:50vh; border-radius:24px; border:1px solid black; background:rgba(0, 0, 0, 0.2)">TRENDING FOOD</div>
+                    <div class="row" id="trending">
+                    </div>
                 </div>
-            </div>
             <script src="product.js"></script>
+        </div>
+
+
+
+
+        <div>
+
         </div>
     </div>
     <div style="clear: both;"></div>
