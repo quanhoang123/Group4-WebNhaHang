@@ -281,7 +281,7 @@ img {
 .box .cart {
     display: inline-block;
     padding: 10px 20px;
-    background: #20211c;
+    background: #cee963;
     font-size: 14px;
     font-weight: 700;
     color: #fff;
@@ -372,6 +372,6 @@ img {
 
 
 /* responsive for img  */
-.product .row{
-    display:none;
+.text a{
+    color: blue;
 }

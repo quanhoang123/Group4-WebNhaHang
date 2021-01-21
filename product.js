@@ -180,9 +180,7 @@ var getProduct = function(id) {
                 <p class="description">${aa.note}</p>
                 <div> <p> <label for="quantity">So Luong </lable>
                     <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
-                </p>
-                
-                
+                </p>             
                 <a href="" class="cart" ><i class="fa fa-shopping-cart"></i> Đặt hàng</a>
             </div>
         </div>
