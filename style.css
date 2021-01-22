@@ -27,11 +27,9 @@ header {
     position: relative;
     display: flex;
     text-align: center;
-    justify-content: center ;
+    justify-content: center;
     align-items: center;
 }
-
-
 
 header::before {
     position: absolute;
@@ -103,7 +101,7 @@ header input:checked~.menu-icon .menu-line {
 }
 
 header input:checked~.menu-item {
-   right:23%;
+    right: 23%;
 }
 
 .menu-line::after {
@@ -118,12 +116,12 @@ header input:checked~.menu-item {
 
 .menu-item {
     position: absolute;
-    margin-left:50px;
+    margin-left: 50px;
     width: 100vh;
     height: 50px;
     background: rgba(0, 0, 0, 0.7);
     top: 80px;
-    right:-100%;
+    right: -100%;
     display: inline-flex;
     justify-content: center;
     text-align: center;
@@ -132,8 +130,8 @@ header input:checked~.menu-item {
     transition: 0.6s;
 }
 
-.menu-item li a{
-    margin-left:50px;
+.menu-item li a {
+    margin-left: 50px;
 }
 
 .menu-item li {
@@ -152,11 +150,13 @@ header input:checked~.menu-item {
     font-size: 50px;
     color: rgb(199, 226, 78);
 }
-.btn{
+
+.btn {
     border-radius: 40px;
     color: rgb(199, 226, 78);
     font-size: 30px;
 }
+
 .btn a {
     border-radius: 40px;
     font-size: 30px;
@@ -178,30 +178,34 @@ header input:checked~.menu-item {
     100% {
         opacity: 0.4;
     }
-}     
+}
 
 @media screen and (max-width: 800px) {
-    .menu-icon, .menuline, .menu-item, .menu-text, .btn, {
-      width: 100%; 
+    .menu-icon,
+    .menuline,
+    .menu-item,
+    .menu-text,
+    .btn,
+    {
+        width: 100%;
     }
-    .menu-item{
-        position: fixed;
-        display:table-column;
-        /* justify-content: center; */
-        right:-100%;
-        
-        width: 100px;
-        height: 30vh;
-        display:inline;
-        
-    }
+}
 
-    header input:checked~.menu-item {
-        right:70%;     
-         
-     }
-  }
+.menu-item {
+    position: fixed;
+    display: table-column;
+    /* justify-content: center; */
+    right: -100%;
+    width: 100px;
+    height: 30vh;
+    display: inline;
+}
+
+header input:checked~.menu-item {
+    right: 70%;
+}
 
 
-  /* style HOMEPAGE */
+}
 
+/* style HOMEPAGE */
