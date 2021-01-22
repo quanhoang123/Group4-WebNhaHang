@@ -29,18 +29,23 @@
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+
     <!-- link css -->
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="styleHompage.css">
     <!-- link footer -->
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-
-
+    <script type="text/javascript" src="wow.min.js"></script>
+    <script type="text/javascript">
+        new Wow().init();
+    </script>
     
     <title>HomePage</title>
 </head>
 
 <body>
-    <header>      
+    <header >      
         <div class="head">
             <nav class="navbar navbar-expand-xl navbar-fixed-top "role="navigation"  >
                 <div class="container">
@@ -76,8 +81,7 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li ><a href="" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                            <li ><a href="#" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                            <li ><a href="" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>                   
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
                             <li onclick="addProductOnCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"></span>Card</a></li>                                   
                         </ul>
@@ -118,6 +122,7 @@
                                 <form id="login-form">
                                     <input class="input-form" type="email" placeholder="Enter your email" required><br><br>
                                     <input class="input-form" type="password" placeholder="Enter your password" required><br><br><br>
+                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" required> <span style="color:white"> Remember Password</span><br><br>
                                     <input class="submit-form" type="submit" value="Login" onclick="signIn()">
                                 </form>
                                 <form id="register-form">
@@ -125,6 +130,7 @@
                                     <input class="input-form" type="email" placeholder="Enter your email" required><br><br>
                                     <input class="input-form" type="password"  placeholder="Enter your password" required><br><br>
                                     <input class="input-form" type="number"  placeholder="Enter your phone" required><br><br>
+                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" required> <span style="color:white"> I agree tot the Restaurant app</span> <br><br>
                                     <input class="submit-form" type="submit" value="Register" onclick="signUp()">
                                 </form>
                             </div>
@@ -136,6 +142,9 @@
           </div>
         </div>
       </div>
+
+
+
     <main id="main" class="main">
             <div class="full-screen" id="home">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">                
@@ -152,8 +161,6 @@
                             <button type="button"> <a href="">Xem sản phẩm</a> </button>
                         </div>
                         <div class="item ">
-                            <h3>Ẩm thực VietNam nâng tầm thế giới</h3>
-                            <button type="button"> <a href="">Xem sản phẩm</a> </button>
                             <img src="imgs/anhnen1.jpg" alt="New York" style="width:100%; height:1000px">
                         </div>
                     </div>                 
@@ -180,8 +187,6 @@
                             </div>    
                         </div>
                     </div>
-
-
                     <div style="clear: both;"></div>
 
                     <div class="container product">
@@ -198,6 +203,13 @@
     </main> 
   
     <div style="clear: both;"></div>
+    <br>
+    <br>
+    <div class="body-images">
+        
+    </div>
+    
+  
     <!-- footer -->
     <footer class="bg-light text-center text-lg-start footerHomePage">
        

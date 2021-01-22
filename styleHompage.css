@@ -1,7 +1,9 @@
 .footerHomePage {
-    /* border: 1px solid rgb( 61, 43, 31); */
-    /* background-color: rgb( 255, 191, 0); */
+    border: 1px solid rgb( 61, 43, 31);
+    background-color: rgb(49, 47, 42);
     color: black;
+    width:auto;
+    width: 100%;
     }               
 .text a {
     color: rgb(102, 0, 153);
@@ -375,3 +377,19 @@ img {
 .text a{
     color: blue;
 }
+
+.body-images {
+    background-image: url("imgs/anhnen1.jpg");
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+/* .roomVip{
+    margin:250px 100px;
+    padding:100px ;
+}
+.roomVip img{
+    margin-bottom:10px;
+} */
