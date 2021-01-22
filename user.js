@@ -1,91 +1,122 @@
+var x = document.getElementById("login-form");
+var y = document.getElementById("register-form");
+var z = document.getElementById("pointer-btn");
+var l = document.getElementById("login");
+var r = document.getElementById("register");
+var ac = document.getElementById("action_title");
 
+function register1(){
+    x.style.left = "-450px";
+    y.style.left = "25px";
+    z.style.left = "215px";
+    l.style.color = "#848484";
+    r.style.color = "#00ffc3";
+    ac.textContent = "Register";
+}
 
-
-    var x = document.getElementById("login-form");
-    var y = document.getElementById("register-form");
-    var z = document.getElementById("pointer-btn");
-    var l = document.getElementById("login");
-    var r = document.getElementById("register");
-    var ac = document.getElementById("action_title");
-
-    function register1(){
-        x.style.left = "-450px";
-        y.style.left = "25px";
-        z.style.left = "215px";
-        l.style.color = "#848484";
-        r.style.color = "#00ffc3";
-        ac.textContent = "Register";
-    }
-
-    function login1(){
-        x.style.left = "25px";
-        y.style.left = "450px";
-        z.style.left = "30px";
-        l.style.color = "#00ffc3";
-        r.style.color = "#848484";
-        ac.textContent = "Login";       
-    }		
-    if(login()==true){
-        alert("Đăng Nhập Thành công");
-    }
-    
-    var user = [{
-            id:"User1",
-            username:"admin",
-            name:"HoangTrungQuan",
-            sdt:"035573986",
-            email:"quanhuhoq111@gmail.com",
-            password:"123456789",
-            role:"admin",
-        },
-        {
-            id:"User2",
-            username:"admin",
-            name:"Nguyễn Thị Diễm",
-            sdt:"035573986",
-            email:"diemhuhoq111@gmail.com",
-            password:"123136789",
-            role:"user",
-        },
+function login1(){
+    x.style.left = "25px";
+    y.style.left = "450px";
+    z.style.left = "30px";
+    l.style.color = "#00ffc3";
+    r.style.color = "#848484";
+    ac.textContent = "Login";       
+}		   
+var user = [{
+        id:"User1",
+        username:"admin",
+        name:"HoangTrungQuan",
+        phone:"035573986",
+        email:"quanhuhoq111@gmail.com",
+        password:"123456789",
+        role:"user",
+    },
+    {
+        id:"User2",
+        username:"admin",
+        name:"Nguyễn Thị Diễm",
+        phone:"035573986",
+        email:"diemhuhoq111@gmail.com",
+        password:"123136789",
+        role:"user",
+    },
 ]
 
 
-    var singupArr=[];
+function saveUser(){
+    localStorage.setItem('listUser', JSON.stringify(user))
+}
+function loadUser(){
+    user = JSON.parse(localStorage.getItem('listUser'));
+}
+if(localStorage.getItem('listUser')!=null){
+    loadUser();
+}
+else
+saveUser();
 
-    function saveUser(){
-        localStorage.setItem('listUser', JSON.stringify(user))
+//Function Signup
+function signup() {
+    var User = {
+        id: "User " + parseInt(user.length + 1),
+        fullname: document.getElementById("fullname").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phoned").value,
+        password: document.getElementById("passworded").value,
+        confirmpassword: document.getElementById("passwordedd").value,
     }
-    function loadUser(){
-        user = JSON.parse(localStorage.getItem('listUser'));
-    }
-    if(localStorage.getItem('listUser')!=null){
-        loadUser();
-    }
-    else
-    saveUser();
+    var find = 0;
+    for (var i in user) {
 
-    var signUp=function(){
-        var User={
-            id: "User"+ parseInt(user.length+1),
-            signup: y.value,
-            role: "user",
+        if (User.email == user[i].email) {
+            alert("Tên tài khoản đã tồn tại ! Vui lòng đổi tên khác.")
+            break;
+        } else {
+            if (user.password != user.confirmpassword || user.fullname == '' || user.nameaccount == '') {
+                find++;
+                break;
+            } else {
+                find = 0;
+                break;
+            }
         }
-        alert("Đăng Kí Thành Công");
+    }
+    if (find != 0) {
+        alert("Đăng kí không thành công! Xin vui lòng kiểm tra lại.")
+    } else if (find == 0) {
+        alert("Đăng kí thành công");
+
         user.push(User);
-        localStorage.setItem('listUser',JSON.stringify(user));
+        localStorage.setItem('listUser', JSON.stringify(user));
+        // window.location.assign("amthucvungmien.html");
 
-        window.location.reload;
     }
-    
-    var signUpArr=[];
-    var saveLogin=function(){
-        localStorage.setItem('signup',JSON.stringify(signUpArr))
-    }
-    var loadLogin=function(){
-        signUpArr=JSON.parse(localStorage.getItem('signup'));
-    }
-    if(localStorage.getItem('signup')!=null){
-        loadLogin();
-    }
-    saveLogin();
+}
 
+
+function thongbao() {
+    alert("Bạn chưa đăng nhập!")
+}
+
+
+
+function Signin() {
+
+    var nhanbiet = 0;
+    var username = document.getElementById("named").value;
+    var password = document.getElementById("password").value;
+    for (var i in user) {
+
+        var newuser = JSON.parse(JSON.stringify(user[i]))
+
+        if (username == newuser.email && password == newuser.password) {
+            nhanbiet ++;
+            alert("Đăng nhập thành công");
+            break;
+         // window.location.assign("amthucvungmien.html");
+        }
+        if(username != newuser.email && password != newuser.password && nhanbiet!=0){
+            alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản");         
+        }
+    }
+}

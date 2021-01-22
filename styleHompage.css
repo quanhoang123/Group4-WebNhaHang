@@ -1,8 +1,7 @@
 .footerHomePage {
     border: 1px solid rgb( 61, 43, 31);
-    background-color: rgb(49, 47, 42);
+    background-color: rgb(233, 238, 228);
     color: black;
-    width:auto;
     width: 100%;
     }               
 .text a {
@@ -119,11 +118,16 @@
     color:white;
 }
 
-.product .treding a{
+.treding .nav a{
     text-decoration: none;
+    width: 100%;
+    background-color: #4CAF50;
+    color:black;
+
 }
-.product .treding a:hover{  
-    color:rgb(200, 153, 116);
+
+.treding li a:hover{  
+    background:rgb(230, 208, 191);
 }
 
 
@@ -386,10 +390,12 @@ img {
     background-attachment: fixed;
   }
 
-/* .roomVip{
-    margin:250px 100px;
-    padding:100px ;
-}
-.roomVip img{
-    margin-bottom:10px;
-} */
+  .header123{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+    margin-left: 30px;
+    font-size:115%;
+    color:white;
+    vertical-align: middle;
+   
+    }

@@ -36,11 +36,11 @@
     <link rel="stylesheet" href="styleHompage.css">
     <!-- link footer -->
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <script type="text/javascript" src="wow.min.js"></script>
+    <!-- <script type="text/javascript" src="wow.min.js"></script>
     <script type="text/javascript">
         new Wow().init();
-    </script>
-    
+    </script> -->
+  
     <title>HomePage</title>
 </head>
 
@@ -55,7 +55,7 @@
                                 <ul class="nav nav-left medium-nav-center nav-small  nav-divided" >
                                     <li class="html custom html_topbar_left text-center" >
                                         <span class="mona_html showroom"><a href=""> 101b Lê Hữu Trác, P.Phước Mỹ, Q.Sơn Trà, Tp.Da Nang</a></span>
-                                        <span class="mona_html hotline"><a href="tel:0355739816">035 573 9816</a></span>
+                                        <span class="mona_html hotline"style="margin-left:20px"><a href="tel:0355739816">035 573 9816</a></span>
                                     </li>
     
                                 </ul>
@@ -83,7 +83,11 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li ><a href="" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>                   
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
-                            <li onclick="addProductOnCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"></span>Card</a></li>                                   
+                            <li onclick="addProductCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"> </span>Card
+                                <span id = "count11"></span>
+                              </a>
+                            </li> 
+                                                         
                         </ul>
                         <form class="navbar-form navbar-right" action="">
                             <div class="form-group">
@@ -96,7 +100,56 @@
             </nav>  
         </div>  
     </header>
+    </script>
+    <!-- <script type="text/javascript">
+    var cart=[];
+        function SumAndCount() {
+        var sum = 0 ;
+        var count = 0;
+            for (var k = 0; k < cart.length; k++) {
+                count++;
+                // sum += cart[k].price;
+            }
+        // document.getElementById("result").innerHTML = sum;
+        document.getElementById("count").innerHTML = count;
+        }
 
+        function displayCart() {
+            var container_cart = document.getElementById("container-cart");
+                for (var j = 0; j < cart.length; j++) {
+                var div2 = document.createElement("div");
+                    div2.className = "div2";
+                    var image = document.createElement("img");
+        image.src = cart[j].image;
+        image.className = "image";
+        var nameObj = document.createElement("p");
+        nameObj.innerText = cart[j].name;
+        var price = document.createElement("p");
+        price.innerText = cart[j].price;
+        var buttonDelete = document.createElement("button");
+        buttonDelete.innerText = "Delete";
+
+    div2.appendChild(image);
+    div2.appendChild(nameObj);
+    div2.appendChild(price);
+    div2.appendChild(buttonDelete);
+    container_cart.appendChild(div2);
+
+    buttonDelete.onclick = function(arg) {
+        return function() {
+            cart.splice(arg, 1);
+            document.getElementById("container-cart").innerHTML = "";
+            displayCart();
+        }
+    }(j)
+}
+    if (products.length == 0) {
+      SumAndCount() = 0;
+    } else {
+        SumAndCount();
+ }
+}
+    </script> -->
 
     <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -120,18 +173,19 @@
                             </div>
                             <div class="card-body-login">
                                 <form id="login-form">
-                                    <input class="input-form" type="email" placeholder="Enter your email" required><br><br>
-                                    <input class="input-form" type="password" placeholder="Enter your password" required><br><br><br>
+                                    <input class="input-form" type="email" id="named" placeholder="Enter your email" required><br><br>
+                                    <input class="input-form" type="password" id="password" placeholder="Enter your password" required><br><br><br>
                                     <input class="input-checkbox" type="checkbox" name="" id="checkbox" required> <span style="color:white"> Remember Password</span><br><br>
-                                    <input class="submit-form" type="submit" value="Login" onclick="signIn()">
+                                    <input class="submit-form" type="submit" value="Login" onclick="Signin()">
                                 </form>
                                 <form id="register-form">
-                                    <input class="input-form" type="name"  placeholder="Enter your full name" required><br><br>
-                                    <input class="input-form" type="email" placeholder="Enter your email" required><br><br>
-                                    <input class="input-form" type="password"  placeholder="Enter your password" required><br><br>
-                                    <input class="input-form" type="number"  placeholder="Enter your phone" required><br><br>
-                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" required> <span style="color:white"> I agree tot the Restaurant app</span> <br><br>
-                                    <input class="submit-form" type="submit" value="Register" onclick="signUp()">
+                                    <input class="input-form" type="name"  id="fullname" placeholder="Enter your full name" required><br><br>
+                                    <input class="input-form" type="email" id="email" placeholder="Enter your email" required><br><br>
+                                    <input class="input-form" type="password" id="passworded" placeholder="Enter your password" required><br><br>
+                                    <input class="input-form" type="password" id="passwordedd" placeholder="Enter confirm your password" required><br><br>
+                                    <input class="input-form" type="number" id="phoned" placeholder="Enter your phone" required><br><br>
+                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox2" required> <span style="color:white"> I agree tot the Restaurant app</span> <br><br>
+                                    <input class="submit-form" type="submit" value="Register" onclick="signup()">
                                 </form>
                             </div>
                         </div>
@@ -188,14 +242,29 @@
                         </div>
                     </div>
                     <div style="clear: both;"></div>
-
-                    <div class="container product">
-                        <div class="h3 mb-5 treding"> 
-                            <a href="#trending">TRENDING FOOD</a>
-                            <a href="#trending">DISCOUNT FOOD</a>
-                            <a href="#trending">NEW FOOD</a>
+                    <div class="container">
+                        <div class="h3 mb-5 treding">
+                            <ul class="nav nav-tabs" role="tablist"  style="font-size: 20px; border:none;">
+                                <li class="nav-item" style="margin-right:10px ;"> 
+                                  <a class="nav-link active" href="#trending" role="tab" data-toggle="tab" > <span>Trending food</span> </a>
+                                </li>
+                                <li class="nav-item" style="margin-right:10px ;">
+                                  <a class="nav-link" href="#discount" role="tab" data-toggle="tab"> <span>  Discount food</span></a>
+                                </li>
+                                <li class="nav-item" >
+                                  <a class="nav-link" href="#trending" role="tab" data-toggle="tab"> <span> New food</span> </a>
+                                </li>
+                              </ul>
+                              
+                              <!-- Tab panes -->
+                              <br><br>
+                              <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active row" id="trending"></div>
+                                <div role="tabpanel" class="tab-pane fade row" id="discount"></div>
+                                <div role="tabpanel" class="tab-pane fade row" id="newfood"></div>
+                              </div>                          
                         </div>
-                        <div class="row" id="trending"></div>                        
+                        <!-- <div class="row" id="trending"></div>                         -->
                     </div>
                 <script src="product.js"></script>
             </div>
@@ -206,7 +275,12 @@
     <br>
     <br>
     <div class="body-images">
-        
+        <div class="header123" >
+            <div class="car">
+                <img src="imgs/car.png" style="width: 150px; ">
+                <p>Miễn phí vận chuyển Bán kính 5km</p>
+            </div>
+        </div>
     </div>
     
   
