@@ -142,7 +142,7 @@ function listWatch() {
                 <img src="` + data.img + `" style="width:260px; height:200px;  border-radius:10px;">										
             </div>										
                 <div class="info_box p-3 bg-white ">										
-                    <p class="float-left font-weight-bold mb-0" style="font-size: 115%">` + data.name + `</p><p class="float-left font-weight-bold mb-2" style="font-size: 115%">` + data.price + `đ</p>									
+                    <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.name + `</p><p class="float-left font-weight-bold mb-2" style="font-size: 70%">` + data.price + `đ</p>									
                         <div style="clear: both;"></div>										
                             <div class="star_box float-left pt-2">										
                                 <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong" onclick="getProduct(${i})">Detail</button>                                
@@ -204,7 +204,8 @@ var discount=[
     id: "sp1",
     name : "Cua Hoàng Đế",
     img : "imgs/cuahoangde.jpg",
-    note : "Size :1.7kg - 4kg/con (Bán chạy nhất từ 2kg - 3kg/con)", 
+    note : "Size :1.7kg - 4kg/con (Bán chạy nhất từ 2kg - 3kg/con)",
+    old_price:200000, 
     price : 1400000
     },
     {
@@ -212,52 +213,57 @@ var discount=[
         name : "Tôm Sú Bằm Tỏi",
         img : "imgs/tomsu.png", 
         note : "Size :1kg - 2kg/con (Bán nhiều nhất từ 2kg - 3kg/con)",
-        price : 300000
+        old_price:300000, 
+        price : 200000,
         },
         {
             id: "sp3",
             name : "Gà Chọi 1/2",
             img : "imgs/gachoi.jpg",
             note : "Size :2kg - 4kg/con (Bán nhiều nhất từ 2kg - 3kg/nữa con)",
-            price : 400000
+            old_price : 400000,
+            price:350000,
             },
             {
                 id: "sp4",
                 name : "Hải Sản Hỗn Hợp",
                 img : "imgs/honhop.jpg",
                 note : "Size :2kg - 4kg/dĩa ",
-                price : 200000
+                old_price : 200000,
+                price : 150000,
                 },
                 {
                     id: "sp5",
                     name : "Heo Nướng Ống Tre",
                     img : "imgs/lonnuongongtre.jpg",
                     note : "Size :2kg - 4kg thịt /dĩa ",
-                    price : 122000+"/ong"
+                    old_price : 122000+"/ong ",
+                    price : 99000 +"/ong",
                     },
                     {
                         id: "sp6",
                         name : "Mực Sốt Xả Ớt",
                         img : "imgs/múcot.jpg",
                         note : "Size :2kg - 4kg thịt /dĩa ",
-                        price : 34000
+                        old_price : 34000,
+                        price : 30000,
                         },
                         {
                             id: "sp7",
                             name : "Tôm Hùm",
                             img : "imgs/tomhumhaisan.jpg",
                             note : "Size :2kg - 4kg /con ",
-                            price : 150000
+                            old_price : 150000,
+                            price : 100000,
                             },
                             {
                                 id: "sp8",
                                 name : "Cá Mú Hấp",
                                 img : "imgs/camuhap.jpg",
                                 note : "Size :8kg - 10kg /con ",
-                                price : 9000000
-                                },
-
-                                                                                                          
+                                old_pricece : 9000000,
+                                price: 7500000,
+                                },                                                                                                        
 ]
 function saveProductDiscount() {
     localStorage.setItem('listproductdiscount', JSON.stringify(discount))
@@ -282,7 +288,9 @@ function ProdcutDiscount() {
                     <img src="` + data.img + `" style="width:260px; height:200px;  border-radius:10px;">										
                 </div>										
                     <div class="info_box p-3 bg-white ">										
-                        <p class="float-left font-weight-bold mb-0" style="font-size: 115%">` + data.name + `</p><p class="float-left font-weight-bold mb-2" style="font-size: 115%">` + data.price + `đ</p>									
+                        <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.name + `</p>
+                        <span style="float:left; font-size: 70%"><strike> `+data.old_price+`đ</strike> </span>
+                        <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
                                 <div class="star_box float-left pt-2">										
                                     <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong1" onclick="getProductDiscount(${i})">Detail</button>                                

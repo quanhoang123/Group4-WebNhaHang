@@ -24,16 +24,14 @@ function login1(){
 }		   
 var user = [{
         id:"User1",
-        username:"admin",
         name:"HoangTrungQuan",
         phone:"035573986",
         email:"quanhuhoq111@gmail.com",
         password:"123456789",
-        role:"user",
+        role:"admin",
     },
     {
         id:"User2",
-        username:"admin",
         name:"Nguyễn Thị Diễm",
         phone:"035573986",
         email:"diemhuhoq111@gmail.com",
@@ -58,10 +56,11 @@ saveUser();
 //Function Signup
 function signup() {
     var User = {
-        id: "User " + parseInt(user.length + 1),
-        fullname: document.getElementById("fullname").value,
+        id: "User" + parseInt(user.length + 1),
+        name: document.getElementById("fullname").value,
         email: document.getElementById("email").value,
         phone: document.getElementById("phoned").value,
+        role: "",
         password: document.getElementById("passworded").value,
         confirmpassword: document.getElementById("passwordedd").value,
     }
@@ -73,7 +72,8 @@ function signup() {
             break;
         } else {
             if (user.password != user.confirmpassword || user.fullname == '' || user.nameaccount == '') {
-                find++;
+                find++; 
+                             
                 break;
             } else {
                 find = 0;
@@ -85,38 +85,58 @@ function signup() {
         alert("Đăng kí không thành công! Xin vui lòng kiểm tra lại.")
     } else if (find == 0) {
         alert("Đăng kí thành công");
-
+        User.role="user"; 
         user.push(User);
-        localStorage.setItem('listUser', JSON.stringify(user));
+        localStorage.setItem('listUser', JSON.stringify(user));     
         // window.location.assign("amthucvungmien.html");
-
     }
+    login1();
 }
-
-
-function thongbao() {
-    alert("Bạn chưa đăng nhập!")
-}
-
 
 
 function Signin() {
-
     var nhanbiet = 0;
     var username = document.getElementById("named").value;
     var password = document.getElementById("password").value;
+    user=JSON.parse(localStorage.getItem('listUser'))
+    var b=false;
     for (var i in user) {
-
         var newuser = JSON.parse(JSON.stringify(user[i]))
-
-        if (username == newuser.email && password == newuser.password) {
+        if (username == newuser.email && password == newuser.password ) {
             nhanbiet ++;
             alert("Đăng nhập thành công");
-            break;
-         // window.location.assign("amthucvungmien.html");
+            document.getElementById("account").style.display="none";
+            document.getElementById("userAccount").innerHTML=newuser.name;
+            b=true;
+            // window.location.assign("product.html");
+            break;      
         }
-        if(username != newuser.email && password != newuser.password && nhanbiet!=0){
-            alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản");         
-        }
+       
+       //  if(username != newuser.email && password != newuser.password ){
+        //     break;        
+        // }
     }
+    if(!b)
+    alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản"); 
+
+}
+//Hiện Ẩn mật khẩu trong đăng kí đăng nhập
+let showPassword = false
+const ipnElement = document.querySelector('#password')
+const btnElement = document.querySelector('#btnPassword')
+
+btnElement.addEventListener('click', togglePassword)
+
+function togglePassword() {
+  if (showPassword) {
+    // Đang hiện password
+    // Chuyển sang ẩn password
+    ipnElement.setAttribute('type', 'password')
+    showPassword = false
+  } else {
+    // Đang ẩn password
+    // Chuyển sang hiện password
+    ipnElement.setAttribute('type', 'text')
+    showPassword = true
+  }
 }

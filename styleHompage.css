@@ -388,13 +388,14 @@ img {
     height: 200px;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
   }
 
   .header123{
 	display: grid;
 	grid-template-columns: auto auto auto auto;
     margin-left: 30px;
-    font-size:115%;
+    /* font-size:115%; */
     color:white;
     vertical-align: middle;
    
