@@ -33,7 +33,7 @@
     width:400px;
     height:50px;
     position: absolute;
-    top: 40%;
+    top: 30%;
     left:50%;
     box-sizing: border-box;
     text-align: center;
@@ -137,14 +137,6 @@
     color: black;
 }
                     
-.topNarbar a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.topNarbar .icon {
-    display: none;
-}
 
 @media screen and (max-width: 600px) {
     .topNarbar a:not(:first-child) {
@@ -383,9 +375,9 @@ img {
 }
 
 .body-images {
-    background-image: url("imgs/anhnen1.jpg");
+    background-image: url("imgs/anh.jpg");
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -395,7 +387,6 @@ img {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
     margin-left: 30px;
-    /* font-size:115%; */
     color:white;
     vertical-align: middle;
    

@@ -120,12 +120,37 @@ function Signin() {
     alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản"); 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Hiện Ẩn mật khẩu trong đăng kí đăng nhập
 let showPassword = false
 const ipnElement = document.querySelector('#password')
 const btnElement = document.querySelector('#btnPassword')
 
-btnElement.addEventListener('click', togglePassword)
+const passElement = document.querySelector('#passworded')
+const buttonElement = document.querySelector('#btnPasswordd')
+
+
+const confirmElement = document.querySelector('#passwordedd')
+const butonElement = document.querySelector('#bPassworddd')
+
+btnElement.addEventListener('click', togglePassword);
+buttonElement.addEventListener('click', toggPassword);
+butonElement.addEventListener('click', toPassword);
+
+
+
 
 function togglePassword() {
   if (showPassword) {
@@ -140,3 +165,33 @@ function togglePassword() {
     showPassword = true
   }
 }
+
+function toggPassword() {
+    if (showPassword) {
+      // Đang hiện password
+      // Chuyển sang ẩn password
+      passElement.setAttribute('type', 'password')
+      showPassword = false
+    } else {
+      // Đang ẩn password
+      // Chuyển sang hiện password
+      passElement.setAttribute('type', 'text')
+      showPassword = true
+    }
+  }
+
+  function toPassword() {
+    if (showPassword) {
+      // Đang hiện password
+      // Chuyển sang ẩn password
+      confirmElement.setAttribute('type', 'password')
+      showPassword = false
+    } else {
+      // Đang ẩn password
+      // Chuyển sang hiện password
+      confirmElement.setAttribute('type', 'text')
+      showPassword = true
+    }
+  }
+  
+

@@ -41,33 +41,152 @@
         new Wow().init();
     </script> -->
   
+
     <title>HomePage</title>
+
+    <style type="text/css">
+        body{
+          background-color: #f1f1f1;
+        }
+        #header .navbar-light .navbar-nav .nav-link:focus,
+        #header .navbar-light .navbar-nav .nav-link:hover {
+            color: #ef4211;
+        }
+        #header nav{
+          padding: 15px 0px;
+        }
+        #header .navbar-light .navbar-nav .nav-link {
+          color: #5a5a5a;
+          font-size: 20px;
+        }
+        #header {
+            border-bottom: 1px solid #ddd;
+            background-color: #fff;
+            float: left;
+            width: 100%;
+        }
+        #header ul.navbar-nav {
+            position: absolute;
+            right: 0;
+        }
+        #header li.nav-item {
+            margin: 0px 10px;
+        }
+        #header .navbar-light .navbar-nav .active>.nav-link, #header .navbar-light .navbar-nav .nav-link.active, #header .navbar-light .navbar-nav .nav-link.show, #header .navbar-light .navbar-nav .show>.nav-link {
+            color: #ef4211;
+        }
+        #header .dropdown-menu.show {
+            border: none;
+        }
+        .topbar {
+            background-color:black;
+            color: #fff;
+            padding: 4px 0px;
+        }
+        .topbar ul{
+          margin: 0px;
+          padding: 0px;
+        }
+        .topbar ul li {
+            float: left;
+            list-style: none;
+            margin: 3px 7px;
+            font-size: 15px;
+        }
+        .topbar ul li a{
+          color: #fff;
+        }
+        .topbar ul li i {
+            font-size: 18px;
+            margin-right: 3px;
+        }
+        .topbar ul li.followus-label {
+            font-weight: bold;
+        }
+        #header .social-icon {
+            float: right;
+        }
+        /*=============Responsive css==================*/
+        @media (max-width: 991px){
+        .topbar ul li {
+            margin: 3px 3px;
+            font-size: 12px;
+        }
+        #header ul.navbar-nav {
+            position: static;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            margin: 15px 0px 0px;
+        }
+        }
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+        </style>
 </head>
 
 <body>
+
     <header >      
-        <div class="head">
+        <div class="head" ">
             <nav class="navbar navbar-expand-xl navbar-fixed-top "role="navigation"  >
+                <div class="navbar-header col-sm-3">
+                    <img src="">
+                    <a class="navbar-brand" href="">RESTAURANT</a>
+                </div>
                 <div class="container">
-                    <div id="top-bar" class="header-top hide-for-sticky hide-for-medium">
-                        <div class="flex-row container">
-                            <div class="flex-col hide-for-medium float-left">
-                                <ul class="nav nav-left medium-nav-center nav-small  nav-divided" >
-                                    <li class="html custom html_topbar_left text-center" >
-                                        <span class="mona_html showroom"><a href=""> 101b Lê Hữu Trác, P.Phước Mỹ, Q.Sơn Trà, Tp.Da Nang</a></span>
-                                        <span class="mona_html hotline"style="margin-left:20px"><a href="tel:0355739816">035 573 9816</a></span>
-                                    </li>
-    
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="navbar-header ">
-                        <img src="">
-                        <a class="navbar-brand" href="">RESTAURANT</a>
-                    </div>
-                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false" style="height: 1px;" >
-                        <ul class="nav navbar-nav">
+                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false"  >
+                        <ul class="nav navbar-nav col-sm-4" >
                             <li class="active"><a href="#home">Home</a></li>
                             <li><a href="#aboutus">About us</a></li>
                             <li class="dropdown">
@@ -77,22 +196,25 @@
                                     <li><a href="#">Jungle Food</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Donate</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li id="account"><a href="" data-toggle="modal" data-target="#exampleModal" ><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>                   
-                            <li><a href="" id="userAccount"> <span class="glyphicon glyphicon-user" style="display: none;"> </span></a></li>
+                        <ul class="nav navbar-nav navbar-right col-sm-3 topnav" id="myTopnav">
+                            <li id="account"><a href="" data-toggle="modal" data-target="#exampleModal" ><span class="glyphicon glyphicon-user"></span> Account</a></li>                   
+                            <li><a id="userAccount"> </a></li>
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
                             <li onclick="addProductCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"> </span>Card
                                 <span id = "count11"></span>
                               </a>
                             </li> 
+                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                                <i class="fa fa-bars"></i>
+                              </a>
                                                          
                         </ul>
-                        <form class="navbar-form navbar-right" action="">
+                        <script src="main.js"></script>
+                        <form class="navbar-form navbar-right col-sm-4" action="">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search" name="search" style="width:25vh">
+                                <input type="text" class="form-control" placeholder="Search" name="search" style="width:20vh">
                             </div>
                             <button type="submit" class="btn btn-default" onclick="searchProduct()">Search</button>
                         </form>
@@ -101,8 +223,6 @@
             </nav>  
         </div>  
     </header>
-    </script>
-    
 
     <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -138,13 +258,13 @@
                                     <input class="input-form" type="name"  id="fullname" placeholder="Enter your full name" required><br><br>
                                     <input class="input-form" type="email" id="email" placeholder="Enter your email" required><br><br>
                                     <input class="input-form" type="password" id="passworded" placeholder="Enter your password" required >
-                                        <button class="btn btn-secondary" type="button" id="btnPassword" style="position: absolute; right:0px;">
+                                        <button class="btn btn-secondary" type="button" id="btnPasswordd" style="position: absolute; right:0px;">
                                             <span class="fas fa-eye"></span>
                                         </button>
                                         
                                     <br><br>
                                     <input class="input-form" type="password" id="passwordedd" placeholder="Enter confirm your password" required>
-                                        <button class="btn btn-secondary" type="button" id="btnPassword" style="position: absolute; right:0px;">
+                                        <button class="btn btn-secondary" type="button" id="bPassworddd" style="position: absolute; right:0px;">
                                             <span class="fas fa-eye"></span>
                                         </button>
                                     <br><br>
@@ -175,12 +295,12 @@
                    
                     <div class="carousel-inner">
                         <div class="item active" >
-                            <img src="imgs/anhnen2.jpg" alt="Los Angeles" style="width:100%; height:1000px">
+                            <img src="imgs/anhnen2.jpg" alt="Los Angeles" style="width:100%; ">
                             <h3>Ẩm thực VietNam nâng tầm thế giới</h3>
                             <button type="button"> <a href="">Xem sản phẩm</a> </button>
                         </div>
                         <div class="item ">
-                            <img src="imgs/anhnen1.jpg" alt="New York" style="width:100%; height:1000px">
+                            <img src="imgs/anhnen1.jpg" alt="New York" style="width:100%;">
                         </div>
                     </div>                 
                     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
@@ -231,6 +351,8 @@
                         </div>
                         <!-- <div class="row" id="trending"></div>                         -->
                     </div>
+
+                    
                 <script src="product.js"></script>
             </div>
         </div>
@@ -259,8 +381,32 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="h3 mb-5 treding">
+            <ul class="nav nav-tabs" role="tablist"  style="font-size: 20px; border:none;">
+                <li class="nav-item" style="margin-right:10px ;"> 
+                  <a class="nav-link active" href="#" role="tab" data-toggle="tab" > <span>Books table</span> </a>
+                </li>
+                <li class="nav-item" style="margin-right:10px ;">
+                  <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span> </span></a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span></span> </a>
+                </li>
+              </ul>
+              
+              <!-- Tab panes -->
+              <br><br>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active row" id="roomvip"></div>
+                <div role="tabpanel" class="tab-pane fade row" id=""></div>
+                <div role="tabpanel" class="tab-pane fade row" id=""></div>
+              </div>                          
+        </div>
+        <script src="room.js"></script>
+
+    </div>   
     
-  
     <!-- footer -->
     <footer class="bg-light text-center text-lg-start footerHomePage">
        
@@ -269,12 +415,12 @@
             <div class="row">
               
                 <div class="col-sm-6 text">
-                    <h2 class=" w3-wide" id="contact">Contact</h2>
-                    <p style="font-size: large;"><b> Email: <a href=""> amthucvietnam@qvvd.vn.com</a> 
+                    <h2 class=" w3-wide" id="contact"></h2>
+                    <p style="font-size: large;"><b> <a href=""> </a> 
                     </p>
-                    <p style="font-size: large;"><b>  Facebook: </b><a href="">  amthucvietnam-qvvd </a>
+                    <p style="font-size: large;"><b>   </b><a href="">   </a>
                     </p>
-                    <p style="font-size: large;"><b> Contac:</b> <a href=""> (+84) 0355 739 816</a>
+                    <p style="font-size: large;"><b></b> <a href=""></a>
                     </p>
                 </div>
               
@@ -285,8 +431,35 @@
             </div>
         
         </div>
-       
+        
+        <div id="header">
+            <div class="topbar">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-8">
+                    <ul>
+                      <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> + (+84) 0355 739 816</li>
+                      <li>|</li>
+                      <li><a href="mailto:"><i class="fa fa-envelope-o" aria-hidden="true"></i> amthucvietnam@qvvd.vn.com</a></li>
+                      <li>|</li>
+                      <li><i class="fa fa-clock-o" ari  a-hidden="true"></i> 24/7 Hours Working</li>
+                    </ul>
+                  </div>
+                  <div class="col-sm-4">
+                    <ul class="social-icon">
+                      <li class="followus-label">Follow Us:</li>
+                      <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                      <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="text-center p-3 " style="background-color: rgba(0, 0, 0, 0.2)">
+
             © 2021 Copyright:
             <a class="text-dark" href="https://mdbootstrap.com/">Group4-Restaurent.com</a>
         </div>
