@@ -82,7 +82,7 @@ function displayRoom() {
                         <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.address + `</p>
                         <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
-                                <div class="star_box float-left pt-2">										
+                                <div class="star_box float-left pt-2 btndetail">										
                                     <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong2" onclick="getRoomVip(${i})">Detail</button>                                
                                         <div class="order_box float-right" style=" float:right" >
                                         <button type="button" class="btn btn-primary " data-toggle="modal"  onclick="addProduct1234(${i})">Add Cart</button>	 

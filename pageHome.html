@@ -51,7 +51,7 @@
 
     <header >      
         <div class="head" ">
-            <nav class="navbar navbar-expand-xl navbar-fixed-top "role="navigation"  >
+            <nav class="navbar navbar-expand-sm navbar-fixed-top "role="navigation"  >
                 <div class="navbar-header col-sm-2">
                     <img src="">
                     <a class="navbar-brand" href="">RESTAURANT</a>
@@ -70,7 +70,7 @@
                             </li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right col-sm-4 topnav" id="myTopnav">
+                        <ul class="nav navbar-nav navbar-right col-sm-4" >
                             <li id="account"><a href="" data-toggle="modal" data-target="#exampleModal" ><span class="glyphicon glyphicon-user"></span>Account</a></li>                   
                             <li><a id="userAccount"> </a></li>
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
@@ -78,12 +78,9 @@
                                 <span id = "count11"></span>
                               </a>
                             </li> 
-                            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                                <i class="fa fa-bars"></i>
-                              </a>
+                            
                                                          
                         </ul>
-                        <script src="main.js"></script>
                         <form class="navbar-form navbar-right col-sm-4" action="">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search" name="search" style="width:20vh">
@@ -200,8 +197,8 @@
                     </div>
                     <div style="clear: both;"></div>
                     <div class="container">
-                        <div class="h3 mb-5 treding">
-                            <ul class="nav nav-tabs" role="tablist"  style="font-size: 20px; border:none;">
+                        <div class="h3 mb-5 treding"> 
+                            <ul class="nav nav-tabs" role="tablist" >
                                 <li class="nav-item" style="margin-right:10px ;"> 
                                   <a class="nav-link active" href="#trending" role="tab" data-toggle="tab" > <span>Trending food</span> </a>
                                 </li>
@@ -236,20 +233,20 @@
     <div class="body-images">
         <div class="discounts" >
             <div class="car">
-                <img src="imgs/car.png" style="width: 30%; ">
-                <p><b> Miễn phí vận chuyển Bán kính 5km</b></p>
+                <img src="imgs/car.png" >
+                <span><b> Miễn phí ship < 5km</b></span>
             </div>
             <div class="car">
-                <img src="imgs/car.png" style="width: 30%; ">
-                <p><b> Miễn phí vận chuyển Bán kính 5km</b></p>
+                <img src="imgs/car.png" >
+                <span><b> Miễn phí 30% khi đặt 5 mâm</b></span>
             </div>
             <div class="car">
-                <img src="imgs/car.png" style="width: 30%; ">
-                <p><b> Miễn phí vận chuyển Bán kính 5km</b></p>
+                <img src="imgs/car.png">
+                <span><b> Phục vụ bạn mọi lúc mọi nơi </b></span>
             </div>
             <div class="car">
-                <img src="imgs/car.png" style="width: 30%; ">
-                <p><b> Miễn phí vận chuyển Bán kính 5km</b></p>
+                <img src="imgs/car.png">
+                <span><b> Vệ sinh an toàn thực phẩm</b></span>
             </div>
         </div>
     </div>
@@ -259,12 +256,12 @@
                 <li class="nav-item" style="margin-right:10px ;"> 
                   <a class="nav-link active" href="#" role="tab" data-toggle="tab" > <span>Books table</span> </a>
                 </li>
-                <li class="nav-item" style="margin-right:10px ;">
+                <!-- <li class="nav-item" style="margin-right:10px ;">
                   <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span> </span></a>
                 </li>
                 <li class="nav-item" >
                   <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span></span> </a>
-                </li>
+                </li> -->
               </ul>
               
               <!-- Tab panes -->
@@ -278,31 +275,27 @@
         <script src="room.js"></script>
 
     </div>   
-    <div class="comment-customer container">
-      <p style="border:1px solid black;  background: rgb(197, 103, 103); font-size: 115%; display:grid; grid-template-columns: auto auto;" ><a href="">Cảm nhận của khách hàng</a></p>
+    
+    <div class="textComment container">
+        <p><a href="">Comemnt of customer</a></p>
+    </div>  
+    <div class="comment-customer container" >  
+ 
       <div class="comment">      
-        <img src="imgs/obama.jpg" alt="" style="width:115px; height: 115px; border-radius:100px; float:left; ">
+        <img src="imgs/obama.jpg" alt="">
         <p>Tôi đã sử dụng nó và thấy đây đúng là một trang web tuyệt vời và hơn cả tuyệt với. Nếu các bạn muốn tận hưởng một bữa ăn ấm cúng và tuyệt vời hãy tới với Nhà hàng Group4</p>
-        <p style="color:blue; font-size:30px">Tổng thống Obama</p>
+        <p>Tổng thống Obama</p>
       </div>
       <div class="comment ">    
-        <img src="imgs/ngokhong.jpg" alt="" style="width:115px; height: 115px; border-radius:100px; float:left;">
+        <img src="imgs/batgioi.jpg" alt="">
         <p>Tôi đã sử dụng nó và thấy đây đúng là một trang web tuyệt vời và hơn cả tuyệt với. Nếu các bạn muốn tận hưởng một bữa ăn ấm cúng và tuyệt vời hãy tới với Nhà hàng Group4</p>
-        <p style="color:blue; font-size:30px">Ngộ Không</p>
+        <p >Bát giới</p>
       </div>
-      <div class="comment ">    
-        <img src="imgs/batgioi.jpg" alt="" style="width:115px; height: 115px; border-radius:100px; float:left;">
-        <p>Tôi đã sử dụng nó và thấy đây đúng là một trang web tuyệt vời và hơn cả tuyệt với. Nếu các bạn muốn tận hưởng một bữa ăn ấm cúng và tuyệt vời hãy tới với Nhà hàng Group4</p>
-        <p style="color:blue; font-size:30px">Bát giới</p>
-      </div>
-      <div class="comment ">    
-        <img src="imgs/obama.jpg" alt="" style="width:115px; height: 115px; border-radius:100px; float:left;">
-        <p>Tôi đã sử dụng nó và thấy đây đúng là một trang web tuyệt vời và hơn cả tuyệt với. Nếu các bạn muốn tận hưởng một bữa ăn ấm cúng và tuyệt vời hãy tới với Nhà hàng Group4</p>
-        <p style="color:blue; font-size:30px">Tổng thống Obama</p>
-      </div>
+      
+
     </div>
    
-
+    <div style="clear: both;"><br><br></div>
     <!-- footer -->
     <footer class="bg-light text-center text-lg-start footerHomePage">
        
@@ -311,10 +304,9 @@
             <div class="row">
               
                 <div class="col-sm-6 text">
-                    <h2 class=" w3-wide" id="contact"></h2>
-                    <p style="font-size: large;"><b> <a href=""> </a> 
-                    </p>
-                    <p style="font-size: large;"><b>   </b><a href="">   </a>
+                    <h2 class=" w3-wide" id="contact">Member system</h2>
+                    <p style="font-size: large;"> <a href=""> <img src="" alt=""> </a> </p>
+                    <p style="font-size: large;"><a href="">   </a>
                     </p>
                     <p style="font-size: large;"><b></b> <a href=""></a>
                     </p>

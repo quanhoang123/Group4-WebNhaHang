@@ -138,17 +138,17 @@ function listWatch() {
         var prinf =
             ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">										
         <div class="produre_box bg-white shadow-sm ">										
-            <div class="image_box imgs">										
+            <div class="image_box imgs" >										
                 <img src="` + data.img + `" style="width:260px; height:200px;  border-radius:10px;">										
             </div>										
                 <div class="info_box p-3 bg-white ">										
-                    <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.name + `</p><p class="float-left font-weight-bold mb-2" style="font-size: 70%">` + data.price + `đ</p>									
+                    <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%; color:white;">` + data.name + `</p><p class="float-left font-weight-bold mb-2 text-center" style="font-size: 70%;color:white;">` + data.price + `đ</p>									
                         <div style="clear: both;"></div>										
-                            <div class="star_box float-left pt-2">										
-                                <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong" onclick="getProduct(${i})">Detail</button>                                
-                                    <div class="order_box float-right" style=" float:right" >
-                                    <button type="button" class="btn btn-primary " data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
-                                    </div>	
+                            <div class="star_box  pt-2" >										                                                             
+                                        <div class="order_box btndetail" >
+                                    <button type="button" class="btn btn-primary col-sm-6" data-toggle="modal" data-target="#exampleModalLong" onclick="getProduct(${i})" >Detail</button>
+                                    <button type="button" class="btn btn-primary col-sm-6"  data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
+                                        </div>	
                                 <div  class="modal fade mt-5" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >										
                                     <div class="modal-dialog" role="diolog" style="width:30%; >										
                                         <div class="modal-content">										
@@ -292,7 +292,7 @@ function ProdcutDiscount() {
                         <span style="float:left; font-size: 70%"><strike> `+data.old_price+`đ</strike> </span>
                         <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
-                                <div class="star_box float-left pt-2">										
+                                <div class="star_box float-left pt-2 btndetail" >										
                                     <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong1" onclick="getProductDiscount(${i})">Detail</button>                                
                                         <div class="order_box float-right" style=" float:right" >
                                         <button type="button" class="btn btn-primary " data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
@@ -355,12 +355,13 @@ saveCart();
 
 var count=0;
 function addProduct123(i){
-
         let sanpham=JSON.parse(JSON.stringify(product[i]));
     cart.push(sanpham);
-    alert("themHangThanhCong");
+    alert("Thêm vào giỏ hàng thành công");
     document.getElementById("count11").innerHTML =++count;
     saveCart();
  
 }
-
+var listProductCart= function(){
+    
+}
