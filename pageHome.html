@@ -70,14 +70,12 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right col-sm-4" >
                             <li id="account"><a href="" data-toggle="modal" data-target="#exampleModal" ><span class="glyphicon glyphicon-user"></span>Account</a></li>                   
-                            <li><a id="userAccount"> </a></li>
+                           
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
-                            <li onclick="addProductCard()"><a ><span class="glyphicon glyphicon-shopping-cart"> </span>Cart
-                                <span id = "count11"></span>
+                            <li onclick="addProductCard()"><a ><span class="glyphicon glyphicon-shopping-cart"> Cart</span>
+                                
                               </a>
-                            </li> 
-                            
-                        <script src="card.js"></script>                                
+                            </li>                                                      
                         </ul>
                         <form class="navbar-form navbar-right col-sm-4" action="">
                             <div class="form-group">
@@ -90,67 +88,6 @@
             </nav>  
         </div>  
     </header>
-
-    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body bodySign">
-                <div class="modalSign">
-                    <div class="card">
-                        <div class="card-title">
-                            <h3><i class="fa fa-user-circle-o" aria-hidden="true"></i> User <span id="action_title">Login</span></h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-body-top">
-                                <button id="login" class="btn" name="login" onclick="login1()">login</button>
-                                <button id="register" class="btn" name="register" onclick="register1()">register</button>
-                                <div id="pointer-btn"></div>
-                            </div>
-                            <div class="card-body-login">
-                                <form id="login-form">
-                                    <input class="input-form" type="email" id="named" placeholder="Enter your email" ><br><br>
-                                    <input class="input-form" type="password" id="password" placeholder="Enter your password" >
-                                        <button class="btn btn-secondary" type="button" id="btnPassword" style="position: absolute; right:0px;">
-                                            <span class="fas fa-eye"></span>
-                                        </button><br><br><br>
-                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" > <span style="color:white"> Remember Password</span><br><br>
-                                    <input class="submit-form" type="button" value="Login" required onclick="Signin()">
-                                </form>
-                                <form id="register-form">
-                                    <input class="input-form" type="name"  id="fullname" placeholder="Enter your full name" ><br><br>
-                                    <input class="input-form" type="email" id="email" placeholder="Enter your email" ><br><br>
-                                    <input class="input-form" type="password" id="passworded" placeholder="Enter your password"  >
-                                        <button class="btn btn-secondary" type="button" id="btnPasswordd" style="position: absolute; right:0px;">
-                                            <span class="fas fa-eye"></span>
-                                        </button>
-                                        
-                                    <br><br>
-                                    <input class="input-form" type="password" id="passwordedd" placeholder="Enter confirm your password" >
-                                        <button class="btn btn-secondary" type="button" id="bPassworddd" style="position: absolute; right:0px;">
-                                            <span class="fas fa-eye"></span>
-                                        </button>
-                                    <br><br>
-                                    <input class="input-form" type="number" id="phoned" placeholder="Enter your phone" required><br><br>
-                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox2" required> <span style="color:white"> I agree tot the Restaurant app</span> <br><br>
-                                    <input class="submit-form" type="button" value="Register" required onclick="signup()">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-            <script src="user.js"></script>
-          </div>
-        </div>
-      </div>
-      
-
-
     <main id="main" class="main">
             <div class="full-screen" id="home">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">                
@@ -226,7 +163,7 @@
     <br>
     <div class="body-images">
         <div class="discounts" >
-            <!-- <div class="car">
+            <div class="car">
                 <img src="imgs/car.png" >
                 <span><b> Miễn phí ship < 5km</b></span>
             </div>
@@ -241,7 +178,7 @@
             <div class="car">
                 <img src="imgs/car.png">
                 <span><b> Vệ sinh an toàn thực phẩm</b></span>
-            </div> -->
+            </div>
         </div>
     </div>
 
