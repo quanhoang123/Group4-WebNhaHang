@@ -1,3 +1,5 @@
+// const API_URL = "https://600bd2f938fd25001702cbac.mockapi.io/api/b/user";
+
 var x = document.getElementById("login-form");
 var y = document.getElementById("register-form");
 var z = document.getElementById("pointer-btn");
@@ -5,7 +7,7 @@ var l = document.getElementById("login");
 var r = document.getElementById("register");
 var ac = document.getElementById("action_title");
 
-function register1(){
+function register1() {
     x.style.left = "-450px";
     y.style.left = "25px";
     z.style.left = "215px";
@@ -14,46 +16,47 @@ function register1(){
     ac.textContent = "Register";
 }
 
-function login1(){
+function login1() {
     x.style.left = "25px";
     y.style.left = "450px";
     z.style.left = "30px";
     l.style.color = "#00ffc3";
     r.style.color = "#848484";
-    ac.textContent = "Login";       
-}		   
+    ac.textContent = "Login";
+}
 var user = [{
-        id:"User1",
-        name:"HoangTrungQuan",
-        phone:"035573986",
-        email:"quanhuhoq111@gmail.com",
-        password:"123456789",
-        role:"admin",
-    },
-    {
-        id:"User2",
-        name:"Nguyễn Thị Diễm",
-        phone:"035573986",
-        email:"diemhuhoq111@gmail.com",
-        password:"123136789",
-        role:"user",
-    },
+    id: "User1",
+    name: "HoangTrungQuan",
+    phone: "035573986",
+    email: "quanhuhoq111@gmail.com",
+    password: "123456789",
+    role: "admin",
+},
+{
+    id: "User2",
+    name: "Nguyễn Thị Diễm",
+    phone: "035573986",
+    email: "diemhuhoq111@gmail.com",
+    password: "123136789",
+    role: "user",
+},
 ]
 
 
-function saveUser(){
+function saveUser() {
     localStorage.setItem('listUser', JSON.stringify(user))
 }
-function loadUser(){
+function loadUser() {
     user = JSON.parse(localStorage.getItem('listUser'));
 }
-if(localStorage.getItem('listUser')!=null){
+if (localStorage.getItem('listUser') != null) {
     loadUser();
 }
 else
-saveUser();
+    saveUser();
 
 //Function Signup
+
 function signup() {
     var User = {
         id: "User" + parseInt(user.length + 1),
@@ -66,14 +69,12 @@ function signup() {
     }
     var find = 0;
     for (var i in user) {
-
         if (User.email == user[i].email) {
             alert("Tên tài khoản đã tồn tại ! Vui lòng đổi tên khác.")
             break;
         } else {
             if (user.password != user.confirmpassword || user.fullname == '' || user.nameaccount == '') {
-                find++; 
-                             
+                find++;
                 break;
             } else {
                 find = 0;
@@ -85,10 +86,9 @@ function signup() {
         alert("Đăng kí không thành công! Xin vui lòng kiểm tra lại.")
     } else if (find == 0) {
         alert("Đăng kí thành công");
-        User.role="user"; 
+        User.role = "user";
         user.push(User);
-        localStorage.setItem('listUser', JSON.stringify(user));     
-        // window.location.assign("amthucvungmien.html");
+        localStorage.setItem('listUser', JSON.stringify(user));
     }
     login1();
 }
@@ -98,26 +98,26 @@ function Signin() {
     var nhanbiet = 0;
     var username = document.getElementById("named").value;
     var password = document.getElementById("password").value;
-    user=JSON.parse(localStorage.getItem('listUser'))
-    var b=false;
+    user = JSON.parse(localStorage.getItem('listUser'))
+    var b = false;
     for (var i in user) {
         var newuser = JSON.parse(JSON.stringify(user[i]))
-        if (username == newuser.email && password == newuser.password ) {
-            nhanbiet ++;
+        if (username == newuser.email && password == newuser.password) {
+            nhanbiet++;
             alert("Đăng nhập thành công");
-            document.getElementById("account").style.display="none";
-            document.getElementById("userAccount").innerHTML=newuser.name;
-            b=true;
+            document.getElementById("account").style.display = "none";
+            document.getElementById("userAccount").innerHTML = newuser.name;
+            b = true;
             // window.location.assign("product.html");
-            break;      
+            break;
         }
-       
-       //  if(username != newuser.email && password != newuser.password ){
+
+        //  if(username != newuser.email && password != newuser.password ){
         //     break;        
         // }
     }
-    if(!b)
-    alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản"); 
+    if (!b)
+        alert("Đăng nhập thất bại xin vui lòng đăng kí tài khoản");
 
 }
 
@@ -153,45 +153,45 @@ butonElement.addEventListener('click', toPassword);
 
 
 function togglePassword() {
-  if (showPassword) {
-    // Đang hiện password
-    // Chuyển sang ẩn password
-    ipnElement.setAttribute('type', 'password')
-    showPassword = false
-  } else {
-    // Đang ẩn password
-    // Chuyển sang hiện password
-    ipnElement.setAttribute('type', 'text')
-    showPassword = true
-  }
+    if (showPassword) {
+        // Đang hiện password
+        // Chuyển sang ẩn password
+        ipnElement.setAttribute('type', 'password')
+        showPassword = false
+    } else {
+        // Đang ẩn password
+        // Chuyển sang hiện password
+        ipnElement.setAttribute('type', 'text')
+        showPassword = true
+    }
 }
 
 function toggPassword() {
     if (showPassword) {
-      // Đang hiện password
-      // Chuyển sang ẩn password
-      passElement.setAttribute('type', 'password')
-      showPassword = false
+        // Đang hiện password
+        // Chuyển sang ẩn password
+        passElement.setAttribute('type', 'password')
+        showPassword = false
     } else {
-      // Đang ẩn password
-      // Chuyển sang hiện password
-      passElement.setAttribute('type', 'text')
-      showPassword = true
+        // Đang ẩn password
+        // Chuyển sang hiện password
+        passElement.setAttribute('type', 'text')
+        showPassword = true
     }
-  }
+}
 
-  function toPassword() {
+function toPassword() {
     if (showPassword) {
-      // Đang hiện password
-      // Chuyển sang ẩn password
-      confirmElement.setAttribute('type', 'password')
-      showPassword = false
+        // Đang hiện password
+        // Chuyển sang ẩn password
+        confirmElement.setAttribute('type', 'password')
+        showPassword = false
     } else {
-      // Đang ẩn password
-      // Chuyển sang hiện password
-      confirmElement.setAttribute('type', 'text')
-      showPassword = true
+        // Đang ẩn password
+        // Chuyển sang hiện password
+        confirmElement.setAttribute('type', 'text')
+        showPassword = true
     }
-  }
-  
+}
+
 

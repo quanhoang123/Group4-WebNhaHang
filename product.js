@@ -83,34 +83,34 @@ var product=[
                                                 note : "Size :0.5kg - 1kg /con ",
                                                 price : 12000 +"/1c"
                                                 },
-                                                {
-                                                    id: "sp13",
-                                                    name : "Tôm Nướng",
-                                                    img : "imgs/tomnuong.jpg",
-                                                    note : "Size :0.5kg - 1kg /con ",
-                                                    price : 122000
-                                                    },
-                                                    {
-                                                        id: "sp14",
-                                                        name : "Gà Nhà Nguyên co",
-                                                        img : "imgs/ganuong.jpg",
-                                                        note : "Size :1.5kg - 2kg /con ",
-                                                        price : 150000
-                                                        },
-                                                        {
-                                                            id: "sp15",
-                                                            name : "Rắn xào xả ớt",
-                                                            img : "imgs/ranxao.jpg",
-                                                            note : "Size :2kg - 2.5kg /dĩa ",
-                                                            price : 120000
-                                                            },
-                                                            {
-                                                                id: "sp16",
-                                                                name : "Ba Ba Xầm Chuối",
-                                                                img : "imgs/baba.jpg",
-                                                                note : "Size :0.5kg - 1kg /nồi ",
-                                                                price : 145000
-                                                                },
+                                                // {
+                                                //     id: "sp13",
+                                                //     name : "Tôm Nướng",
+                                                //     img : "imgs/tomnuong.jpg",
+                                                //     note : "Size :0.5kg - 1kg /con ",
+                                                //     price : 122000
+                                                //     },
+                                                //     {
+                                                //         id: "sp14",
+                                                //         name : "Gà Nhà Nguyên co",
+                                                //         img : "imgs/ganuong.jpg",
+                                                //         note : "Size :1.5kg - 2kg /con ",
+                                                //         price : 150000
+                                                //         },
+                                                //         {
+                                                //             id: "sp15",
+                                                //             name : "Rắn xào xả ớt",
+                                                //             img : "imgs/ranxao.jpg",
+                                                //             note : "Size :2kg - 2.5kg /dĩa ",
+                                                //             price : 120000
+                                                //             },
+                                                //             {
+                                                //                 id: "sp16",
+                                                //                 name : "Ba Ba Xầm Chuối",
+                                                //                 img : "imgs/baba.jpg",
+                                                //                 note : "Size :0.5kg - 1kg /nồi ",
+                                                //                 price : 145000
+                                                //                 },
                                                              
 
 ]
@@ -153,7 +153,7 @@ function listWatch() {
                                     <div class="modal-dialog" role="diolog" style="width:30%; >										
                                         <div class="modal-content">										
                                             <div class="modal-body" style="background:rgb(199,226,78); ">										
-                                                <div id="printf_watch" >	
+                                                <div id="printf_food" >	
                                                 </div>										
                                             </div>										
                                         </div>										
@@ -175,7 +175,7 @@ var getProduct = function(id) {
     let html = "";
     let allWatch = JSON.parse(localStorage.getItem('listproduct'))
     let aa = allWatch[id];
-    document.getElementById("printf_watch").innerHTML = `${html}         
+    document.getElementById("printf_food").innerHTML = `${html}         
     <div class="boxProduct" >
         <div class="box"> <img src="${aa.img}" alt="" style="max-width:100% ;">
             <div class="box-heading">
@@ -195,43 +195,39 @@ var getProduct = function(id) {
 
 
 
-
-
-
-
 var discount=[
     {
-    id: "sp1",
-    name : "Cua Hoàng Đế",
-    img : "imgs/cuahoangde.jpg",
-    note : "Size :1.7kg - 4kg/con (Bán chạy nhất từ 2kg - 3kg/con)",
-    old_price:200000, 
-    price : 1400000
-    },
-    {
-        id: "sp2",
-        name : "Tôm Sú Bằm Tỏi",
-        img : "imgs/tomsu.png", 
-        note : "Size :1kg - 2kg/con (Bán nhiều nhất từ 2kg - 3kg/con)",
-        old_price:300000, 
-        price : 200000,
+        id: "sp1",
+        name : "Tôm Nướng",
+        img : "imgs/tomnuong.jpg",
+        note : "Size :0.5kg - 1kg /con ",
+        old_price : 100000,
+        price : 80000
         },
         {
-            id: "sp3",
-            name : "Gà Chọi 1/2",
-            img : "imgs/gachoi.jpg",
-            note : "Size :2kg - 4kg/con (Bán nhiều nhất từ 2kg - 3kg/nữa con)",
-            old_price : 400000,
-            price:350000,
+            id: "sp2",
+            name : "Gà Nhà Nguyên co",
+            img : "imgs/ganuong.jpg",
+            note : "Size :1.5kg - 2kg /con ",
+            old_price : 200000,
+            price : 150000
             },
             {
-                id: "sp4",
-                name : "Hải Sản Hỗn Hợp",
-                img : "imgs/honhop.jpg",
-                note : "Size :2kg - 4kg/dĩa ",
-                old_price : 200000,
-                price : 150000,
+                id: "sp3",
+                name : "Rắn xào xả ớt",
+                img : "imgs/ranxao.jpg",
+                note : "Size :2kg - 2.5kg /dĩa ",
+                old_price : 120000,
+                price : 100000
                 },
+                {
+                    id: "sp4",
+                    name : "Ba Ba Xầm Chuối",
+                    img : "imgs/baba.jpg",
+                    note : "Size :0.5kg - 1kg /nồi ",
+                    old_price : 122000+"/ong ",
+                    price : 145000
+                    },
                 {
                     id: "sp5",
                     name : "Heo Nướng Ống Tre",
@@ -292,11 +288,11 @@ function ProdcutDiscount() {
                         <span style="float:left; font-size: 70%"><strike> `+data.old_price+`đ</strike> </span>
                         <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
-                                <div class="star_box float-left pt-2 btndetail" >										
-                                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong1" onclick="getProductDiscount(${i})">Detail</button>                                
-                                        <div class="order_box float-right" style=" float:right" >
-                                        <button type="button" class="btn btn-primary " data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
-                                        </div>	
+                                <div class="star_box float-left pt-2 btndetail" >
+                                    <div class="order_box btndetail" >
+                                        <button type="button" class="btn btn-primary col-sm-6" data-toggle="modal" data-target="#exampleModalLong1" onclick="getProductDiscount(${i})" >Detail</button>
+                                        <button type="button" class="btn btn-primary col-sm-6"  data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
+                                    </div>	                   	
                                     <div  class="modal fade mt-5" id="exampleModalLong1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >										
                                         <div class="modal-dialog" role="diolog" style="width:30%; >										
                                             <div class="modal-content">										
@@ -308,7 +304,7 @@ function ProdcutDiscount() {
                                         </div>										
                                     </div>										
                                 </div>	                          														
-                                <div style="clear: both;"></div>																				
+                            <div style="clear: both;"></div>																				
                     </div>
             </div>										
         </div>`;
@@ -340,28 +336,3 @@ var getProductDiscount = function(id) {
 
 
 
-var cart=[];
-function saveCart(){
-    localStorage.setItem('listCart', JSON.stringify(cart))
-}
-function loadCart(){
-    cart = JSON.parse(localStorage.getItem('listCart'));
-}
-if(localStorage.getItem('listCart')!=null){
-    loadCart();
-} else
-saveCart();
-
-
-var count=0;
-function addProduct123(i){
-        let sanpham=JSON.parse(JSON.stringify(product[i]));
-    cart.push(sanpham);
-    alert("Thêm vào giỏ hàng thành công");
-    document.getElementById("count11").innerHTML =++count;
-    saveCart();
- 
-}
-var listProductCart= function(){
-    
-}

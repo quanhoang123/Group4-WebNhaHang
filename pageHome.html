@@ -32,16 +32,14 @@
 
 
     <!-- link css -->
-    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="styleHompage.css">
     <!-- link footer -->
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-    <!-- <script type="text/javascript" src="wow.min.js"></script>
-    <script type="text/javascript">
-        new Wow().init();
-    </script> -->
-  
 
+
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <title>HomePage</title>
 
 
@@ -74,12 +72,12 @@
                             <li id="account"><a href="" data-toggle="modal" data-target="#exampleModal" ><span class="glyphicon glyphicon-user"></span>Account</a></li>                   
                             <li><a id="userAccount"> </a></li>
                             <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
-                            <li onclick="addProductCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"> </span>Card
+                            <li onclick="addProductCard()"><a ><span class="glyphicon glyphicon-shopping-cart"> </span>Cart
                                 <span id = "count11"></span>
                               </a>
                             </li> 
                             
-                                                         
+                        <script src="card.js"></script>                                
                         </ul>
                         <form class="navbar-form navbar-right col-sm-4" action="">
                             <div class="form-group">
@@ -115,31 +113,31 @@
                             </div>
                             <div class="card-body-login">
                                 <form id="login-form">
-                                    <input class="input-form" type="email" id="named" placeholder="Enter your email" required><br><br>
-                                    <input class="input-form" type="password" id="password" placeholder="Enter your password" required>
+                                    <input class="input-form" type="email" id="named" placeholder="Enter your email" ><br><br>
+                                    <input class="input-form" type="password" id="password" placeholder="Enter your password" >
                                         <button class="btn btn-secondary" type="button" id="btnPassword" style="position: absolute; right:0px;">
                                             <span class="fas fa-eye"></span>
                                         </button><br><br><br>
-                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" required> <span style="color:white"> Remember Password</span><br><br>
-                                    <input class="submit-form" type="button" value="Login" onclick="Signin()">
+                                    <input class="input-checkbox" type="checkbox" name="" id="checkbox" > <span style="color:white"> Remember Password</span><br><br>
+                                    <input class="submit-form" type="button" value="Login" required onclick="Signin()">
                                 </form>
                                 <form id="register-form">
-                                    <input class="input-form" type="name"  id="fullname" placeholder="Enter your full name" required><br><br>
-                                    <input class="input-form" type="email" id="email" placeholder="Enter your email" required><br><br>
-                                    <input class="input-form" type="password" id="passworded" placeholder="Enter your password" required >
+                                    <input class="input-form" type="name"  id="fullname" placeholder="Enter your full name" ><br><br>
+                                    <input class="input-form" type="email" id="email" placeholder="Enter your email" ><br><br>
+                                    <input class="input-form" type="password" id="passworded" placeholder="Enter your password"  >
                                         <button class="btn btn-secondary" type="button" id="btnPasswordd" style="position: absolute; right:0px;">
                                             <span class="fas fa-eye"></span>
                                         </button>
                                         
                                     <br><br>
-                                    <input class="input-form" type="password" id="passwordedd" placeholder="Enter confirm your password" required>
+                                    <input class="input-form" type="password" id="passwordedd" placeholder="Enter confirm your password" >
                                         <button class="btn btn-secondary" type="button" id="bPassworddd" style="position: absolute; right:0px;">
                                             <span class="fas fa-eye"></span>
                                         </button>
                                     <br><br>
                                     <input class="input-form" type="number" id="phoned" placeholder="Enter your phone" required><br><br>
                                     <input class="input-checkbox" type="checkbox" name="" id="checkbox2" required> <span style="color:white"> I agree tot the Restaurant app</span> <br><br>
-                                    <input class="submit-form" type="button" value="Register" onclick="signup()">
+                                    <input class="submit-form" type="button" value="Register" required onclick="signup()">
                                 </form>
                             </div>
                         </div>
@@ -150,7 +148,7 @@
           </div>
         </div>
       </div>
-
+      
 
 
     <main id="main" class="main">
@@ -196,7 +194,7 @@
                         </div>
                     </div>
                     <div style="clear: both;"></div>
-                    <div class="container">
+                    <div class="container ">
                         <div class="h3 mb-5 treding"> 
                             <ul class="nav nav-tabs" role="tablist" >
                                 <li class="nav-item" style="margin-right:10px ;"> 
@@ -204,9 +202,6 @@
                                 </li>
                                 <li class="nav-item" style="margin-right:10px ;">
                                   <a class="nav-link" href="#discount" role="tab" data-toggle="tab"> <span>  Discount food</span></a>
-                                </li>
-                                <li class="nav-item" >
-                                  <a class="nav-link" href="#trending" role="tab" data-toggle="tab"> <span> New food</span> </a>
                                 </li>
                               </ul>
                               
@@ -229,10 +224,9 @@
   
     <div style="clear: both;"></div>
     <br>
-    <br>
     <div class="body-images">
         <div class="discounts" >
-            <div class="car">
+            <!-- <div class="car">
                 <img src="imgs/car.png" >
                 <span><b> Miễn phí ship < 5km</b></span>
             </div>
@@ -247,21 +241,16 @@
             <div class="car">
                 <img src="imgs/car.png">
                 <span><b> Vệ sinh an toàn thực phẩm</b></span>
-            </div>
+            </div> -->
         </div>
     </div>
-    <div class="container">
+
+    <div class="container ">
         <div class="h3 mb-5 treding">
             <ul class="nav nav-tabs" role="tablist"  style="font-size: 20px; border:none;">
                 <li class="nav-item" style="margin-right:10px ;"> 
                   <a class="nav-link active" href="#" role="tab" data-toggle="tab" > <span>Books table</span> </a>
                 </li>
-                <!-- <li class="nav-item" style="margin-right:10px ;">
-                  <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span> </span></a>
-                </li>
-                <li class="nav-item" >
-                  <a class="nav-link" href="#" role="tab" data-toggle="tab"> <span></span> </a>
-                </li> -->
               </ul>
               
               <!-- Tab panes -->
@@ -273,7 +262,6 @@
               </div>                          
         </div>
         <script src="room.js"></script>
-
     </div>   
     
     <div class="textComment container">

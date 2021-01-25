@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sending Mail</title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                SecureToken: "94109831-0224-4e92-9273-29a26f74f292",
+                To: 'quanhuhoq111@gmail.com',
+                From: "quan.hoang22@student.passerellesnumeriques.org",
+                Subject: "Sending Email using javascript with SMTPJS",
+                Body: "If you are reading this, dont forget to applaud kaustubh72",
+    
+                Attachments: [{
+                    name: "File_Name_with_Extension",
+                    path: "Full Path of the file"
+                }]
+            })
+                .then(function (message) {
+                    alert("Mail has been sent successfully")
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <input type="button" value="Send Mail" onclick="sendEmail();" />
+    </form>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+  <title>Send Mail</title> 
+  <script src= 
+    "https://smtpjs.com/v3/smtp.js"> 
+  </script> 
+  
+  <script type="text/javascript"> 
+    function sendEmail() { 
+      Email.send({ 
+        Host: "smtp.gmail.com", 
+        Username: "quan.hoang22@student.passerellesnumeriques.org", 
+        Password: "28BC722D003719C4DDED26F39C55971E3BFA",
+        To: 'quan.hoang22@student.passerellesnumeriques.org', 
+        From: "quan.hoang22@student.passerellesnumeriques.org", 
+        Subject: "Sending Email using javascript", 
+        Body: "Well that was easy!!", 
+        Attachments: [ 
+          { 
+            name: "File_Name_with_Extension", 
+            path: "Full Path of the file" 
+          }] 
+      }) 
+        .then(function (message) { 
+          alert("Mail has been sent successfully") 
+        }); 
+    } 
+  </script> 
+</head> 
+  
+<body> 
+  <form method="post"> 
+    <input type="button" value="Send Email" 
+        onclick="sendEmail()" /> 
+  </form> 
+</body> 
+  
+</html> 
