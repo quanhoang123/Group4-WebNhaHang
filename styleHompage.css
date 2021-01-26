@@ -1,20 +1,83 @@
 .footerHomePage {
-    border-top: 2px solid  gray;
+    
     background-color: rgb(247, 247, 247);
     color: black;
     width: 100%;
-    }               
+}     
+.row h2{
+    color:rgb(51, 62, 219);
+}
 .text a {
     color: rgb(102, 0, 153);
-    }
-                    
-.head {
-    margin: 20px;
-   
 }
+.text p{
+    display: grid;
+    grid-template-columns: auto  ;
+    float:left;
+}
+.text img {
+    max-width:120px; 
+    min-height: 120px; 
+    border-radius:100px; 
+  
+}
+                    
+
            
 
+.foods{
+    max-width:100% ;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
 
+.seaFood img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+  
+.seaFood:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+  
+
+
+
+  
+.junggleFood img {
+    display: block;
+    position: relative;
+    max-width: none;
+    width: calc(100% + 20px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+.junggleFood:hover img {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+  
 
 /* hover ảnh header */
 .contentHomePage{
@@ -25,8 +88,6 @@
     background-attachment: fixed;
     background-size: cover;
 }
-
-
 
 .main .item img{
     position: relative;
@@ -361,7 +422,7 @@ img {
 }
 
 .body-images {
-    background-image: url("imgs/anh.jpg");
+    background-image: url("imgs/backgroundd.jpg");
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
@@ -371,19 +432,22 @@ img {
 
 .discounts{
 	display: grid;
-	grid-template-columns: auto auto auto auto;
+	grid-template-rows: auto auto auto;
     margin-left: 20px;
     color:white;
-   
+    min-width: 100%;
     text-align: center;
+    vertical-align: middle;
 }
-.discounts .car{
-    font-size: 100%;
-    width: 50%;
+.discounts img{
+    width:10%; 
 }
-.discounts .car p{
+.discounts b{
+    font-size: 250%;
+    color: white;
+}
+.discounts span{
     font-size: 100%;
-   
 }
 
 
@@ -460,13 +524,6 @@ img {
 }
 }
     
-
-
-
-
-
-
-
  /* comment of customer */
 .comment-customer {
    display: flex;

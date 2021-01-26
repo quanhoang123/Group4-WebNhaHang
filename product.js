@@ -3,21 +3,21 @@ var product=[
     id: "sp1",
     name : "Cua Hoàng Đế",
     img : "imgs/cuahoangde.jpg",
-    note : "Size :1.7kg - 4kg/con (Bán chạy nhất từ 2kg - 3kg/con)", 
+    note : "Size :1.7kg - 4kg/con (Bán chạy nhất từ 2kg - 3kg/con)Đây cũng là món ăn được đánh giá cao về giá trị ẩm thực bởi những chiếc chân dài, vỏ mềm, thớ thịt chắc nịch và ngọt lịm",
     price : 1400000
     },
     {
         id: "sp2",
         name : "Tôm Sú Bằm Tỏi",
         img : "imgs/tomsu.png", 
-        note : "Size :1kg - 2kg/con (Bán nhiều nhất từ 2kg - 3kg/con)",
+        note : "Size :1kg - 2kg/con (Bán nhiều nhất từ 2kg - 3kg/con) Tôm là một loại rất giàu protein, nó chiếm ít nhất từ 20 đến 25% giá trị dinh dưỡng trong một con tôm sú",
         price : 300000
         },
         {
             id: "sp3",
-            name : "Gà Chọi 1/2",
+            name : "Gà Chọi 1/2 ",
             img : "imgs/gachoi.jpg",
-            note : "Size :2kg - 4kg/con (Bán nhiều nhất từ 2kg - 3kg/nữa con)",
+            note : "Size :2kg - 4kg/con (Bán nhiều nhất từ 2kg - 3kg/nữa con) Gà chọi xào sả ớt là một món ăn ngon, lạ miệng, khiến ai cũng thích mê, đặc biệt là trong những ngày thời tiết đang chuyển mùa",
             price : 400000
             },
             {
@@ -31,28 +31,28 @@ var product=[
                     id: "sp5",
                     name : "Heo Nướng Ống Tre",
                     img : "imgs/lonnuongongtre.jpg",
-                    note : "Size :2kg - 4kg thịt /dĩa ",
+                    note : "Size :2kg - 4kg thịt /dĩa Thịt lợn nướng ống tre ẩm thực nổi tiếng của đồng bào Tây Nguyên.",
                     price : 122000+"/ong"
                     },
                     {
                         id: "sp6",
                         name : "Mực Sốt Xả Ớt",
                         img : "imgs/múcot.jpg",
-                        note : "Size :2kg - 4kg thịt /dĩa ",
+                        note : "Size :2kg - 4kg thịt /dĩa Mực xào sả ớt là món ngon được nhiều người ưa chuộng, giàu dinh dưỡng và phù hợp với mọi lứa tuổi.",
                         price : 34000
                         },
                         {
                             id: "sp7",
                             name : "Tôm Hùm",
                             img : "imgs/tomhumhaisan.jpg",
-                            note : "Size :2kg - 4kg /con ",
+                            note : "Size :2kg - 4kg /con Món tôm hùm sốt chua ngọt hấp dẫn vị giác của thực khách cùng với hương vị thơm ngon, hấp dẫn. Tôm hùm sốt chua ngọt đặc biệt có lợi cho sức khỏe nên được nhiều người yêu thích và lựa chọn.",
                             price : 150000
                             },
                             {
                                 id: "sp8",
                                 name : "Cá Mú Hấp",
                                 img : "imgs/camuhap.jpg",
-                                note : "Size :8kg - 10kg /con ",
+                                note : "Size :8kg - 10kg /con Tất cả các món hấp luôn giữ được độ tươi ngon, chất dinh dưỡng và hương vị của món ăn nhất là các món cá hấp ",
                                 price : 9000000
                                 },
                                 {
@@ -73,7 +73,7 @@ var product=[
                                             id: "sp11",
                                             name : "Heo Rừng",
                                             img : "imgs/lonrung.jpg",
-                                            note : "Size :4kg - 8kg /dĩa ",
+                                            note : "Size :4kg - 8kg /dĩa Thịt lợn rừng có vị giòn giòn, thơm ngon nên nó được chế biến thành nhiều món ăn ngon như thịt lợn rừng hấp, thịt lợn rừng nấu giả cầy, thịt lợn rừng nướng muối ớt",
                                             price : 350000
                                             },
                                             {
@@ -284,9 +284,9 @@ function ProdcutDiscount() {
                     <img src="` + data.img + `" style="width:260px; height:200px;  border-radius:10px;">										
                 </div>										
                     <div class="info_box p-3 bg-white ">										
-                        <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.name + `</p>
-                        <span style="float:left; font-size: 70%"><strike> `+data.old_price+`đ</strike> </span>
-                        <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right">` + data.price + `đ</p>									
+                        <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%; color:white;">` + data.name + `</p>
+                        <span style="float:left; font-size: 70%; color:white;"><strike> `+data.old_price+`đ</strike> </span>
+                        <p class=" font-weight-bold mb-2" style="font-size: 70%;float:right;color:white;">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
                                 <div class="star_box float-left pt-2 btndetail" >
                                     <div class="order_box btndetail" >
