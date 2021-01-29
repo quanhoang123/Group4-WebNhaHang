@@ -1,50 +1,51 @@
+const API_URL = "https://600bd2f938fd25001702cbac.mockapi.io/api/b/";
 var room=[
     {
     id: "room1",
     address : "Tầng 1",
-    img : "imgsRoom/room1.jpg",
+    img : "../imgsRoom/room1.jpg",
     status : "Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống.",
     price : 1400000
     },
     {
         id: "room1",
         address : "Tầng 2 ",
-        img : "imgsRoom/room2.jpg", 
+        img : "../imgsRoom/room2.jpg", 
         status : "Còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
         price : 200000,
         },
         {
             id: "room1",
             address : "Tầng 2 ",
-            img : "imgsRoom/room4.jpg",
+            img : "../imgsRoom/room4.jpg",
             status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
             price:350000,
             },
             {
                 id: "room1",
                 address : "Tầng 2 ",
-                img : "imgsRoom/room4.jpg",
+                img : "../imgsRoom/room4.jpg",
                 status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
                 price : 150000,
                 },
                 {
                     id: "room1",
                     address : "Tầng 2 ",
-                    img : "imgsRoom/room5.jpg",
+                    img : "../imgsRoom/room5.jpg",
                     status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
                     price : 99000 ,
                     },
                     {
                         id: "room1",
                         address : "Tầng 2 ",
-                        img : "imgsRoom/room6.jpg",
+                        img : "../imgsRoom/room6.jpg",
                         status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",      
                         price : 30000,
                         },
                         {
                             id: "room1",
                             address : "Tầng 2 ",
-                            img : "imgsRoom/room1.jpg",
+                            img : "../imgsRoom/room1.jpg",
                             status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
                           
                             price : 100000,
@@ -52,7 +53,7 @@ var room=[
                             {
                                 id: "room1",
                                 address : "Tầng 2 ",
-                                img : "imgsRoom/room1.jpg",
+                                img : "../imgsRoom/room1.jpg",
                                 status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống    ",
                                 price: 7500000,
                                 },                                                                                                        
@@ -69,9 +70,84 @@ if (localStorage.getItem('listRoom') != null) {
 } else
 saveRoom();
 
+
+// var room = [];
+// var product = [];
+// var user = [];
+
+// var listImgRoom = [
+//     "../imgsRoom/room1.jpg",
+//     "../imgsRoom/room2.jpg",
+//     "../imgsRoom/room3.jpg",
+//     "../imgsRoom/room4.jpg",
+//     "../imgsRoom/room5.jpg",
+//     "../imgsRoom/room6.jpg"
+// ]
+// var listImgProduct = [
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/cuahoangde.jpg",
+//     "../imgs/gahapxoi.jpg",
+//     "../imgs/galuoc.jpg",
+//     "../imgs/lonrung.jpg",
+//     "../imgs/mucluoc.jpg",
+// ]
+
+// function callAPI(endpoint, method = "GET", body) {
+//     return axios({
+//         method: method,
+//         url: `${API_URL}/${endpoint}`,
+//         data: body,
+//     }).catch((err) => {
+//         console.log(err);
+//     });
+// }
+
+// function loadData() {
+//     callAPI('room', "GET", null).then((res) => {
+//         room = res.data;
+//         console.log(room);
+//     });
+//     callAPI('user', "GET", null).then((res) => {
+//         user = res.data;
+//         console.log(user);
+//     });
+//     callAPI('product', "GET", null).then((res) => {
+//         product = res.data;
+//         console.log(product);
+//     });
+
+//     setTimeout(() => {
+//         displayRoom();
+//         postImg();
+//         // postImgs();
+//     }, 2000)
+// }
+
+
+// loadData();
+// function postImg() {
+//     for (let index = 0; index < listImgRoom.length; index++) {     
+//         var body=room[index];
+//         body.img=listImgRoom[index];
+//         callAPI(`room/${index}`, "PUT", body);
+//     } 
+// }
+// function postImgs() {
+//     for (let index = 0; index < listImgProduct.length; index++) {     
+//         var body=product[index];
+//         body.img=listImgProduct[index];
+//         callAPI(`product/${index}`, "PUT", body);
+//     } 
+// }
 function displayRoom() {
     for (let i in room) {
-        var data = JSON.parse(JSON.stringify(room[i]))
+         var data = JSON.parse(JSON.stringify(room[i]))
         var prinf =
             ` <div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">										
             <div class="produre_box bg-white shadow-sm ">										
@@ -80,13 +156,13 @@ function displayRoom() {
                 </div>										
                     <div class="info_box p-3 bg-white ">										
                         <p class="float-left font-weight-bold mb-0 text-center" style="font-size: 70%">` + data.address + `</p>
-                        <p class=" font-weight-bold mb-2  text-center" style="font-size: 70%;float:right">` + data.price + `đ</p>									
+                        <p class=" font-weight-bold mb-2  text-center" style="font-size: 70%;">` + data.price + `đ</p>									
                             <div style="clear: both;"></div>										
-                                <div class="star_box float-left pt-2 btndetail">										
-                                    <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModalLong2" onclick="getRoomVip(${i})">Detail</button>                                
-                                        <div class="order_box float-right" style=" float:right" >
-                                        <button type="button" class="btn btn-primary " data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
-                                        </div>	
+                                <div class="star_box float-left pt-2 btndetail">
+                                    <div class="order_box float-right"  >										
+                                        <button type="button" class="btn btn-primary col-sm-6" data-toggle="modal" data-target="#exampleModalLong2" onclick="getRoomVip(${i})">Detail</button>                                
+                                        <button type="button" class="btn btn-primary col-sm-6" data-toggle="modal"  onclick="addProduct123(${i})">Add Cart</button>	 
+                                    </div>	
                                     <div  class="modal fade mt-5" id="exampleModalLong2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >										
                                         <div class="modal-dialog" role="diolog" style="width:30%; >										
                                             <div class="modal-content">										
@@ -112,7 +188,6 @@ displayRoom();
 var getRoomVip = function(id) {
     let html = "";
     let allRoom = JSON.parse(localStorage.getItem('listRoom'))
-
     let a = allRoom[id];
     document.getElementById("printf_watch1234").innerHTML = `${html}         
     <div class="boxProduct" >

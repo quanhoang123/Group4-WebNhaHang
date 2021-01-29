@@ -29,7 +29,7 @@
            
 
 .foods{
-    max-width:100% ;
+    max-width:90% ;
     margin:0 auto;
     overflow: hidden;
     position: relative;
@@ -83,7 +83,7 @@
 
 /* hover ảnh header */
 .contentHomePage{
-    background-image: url("imgs/backgorund.jpg");
+    background-image: url("../imgs/backgorund.jpg");
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -159,6 +159,11 @@
         margin-right: 0px;
     }
 }
+
+/* .treding{
+    width:90%;
+    margin: 0 auto;
+} */
 
 .treding a{
     width:40vh; 
@@ -426,7 +431,7 @@ img {
 }
 
 .body-images {
-    background-image: url("imgs/backgroundd.jpg");
+    background-image: url("../imgs/backgroundd.jpg");
     width: 100%;
     height: 300px;
     background-repeat: no-repeat;
@@ -539,12 +544,17 @@ img {
 .comment-customer {
    display: flex;
 }
+.textComment{
+    background:yellowgreen;
+    border-radius: 24px;;
+}
 .textComment p a{
     color:black;
     height: 30px;
+    
     /* border:1px solid black;   */
     /* background: rgb(197, 103, 103);  */
-    font-size: 125%;
+    font-size: 135%;
     
 }
 .comment img{
@@ -553,7 +563,13 @@ img {
     border-radius:100px; 
     float:left; 
 }
+.comment p{
+    font-size:115%;
+}
 .btndetail button{
     background: rgb(224, 235, 126);
     color:black;
 }
+/* .is-not-logged-in button{
+    display: none;
+} */

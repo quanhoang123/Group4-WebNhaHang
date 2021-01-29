@@ -20,7 +20,7 @@ a {
 header {
     width: 100vw;
     height: 100vh;
-    background: url("imgs/anh.jpg");
+    background: url("../imgs/anh.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ header::before {
     height: 100%;
     content: "";
     display: block;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 header input {
