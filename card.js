@@ -1,4 +1,4 @@
-var cart=[];
+var cart = [];
 
 
 if (localStorage.getItem('listCart') != null) {
@@ -15,38 +15,105 @@ displayCart();
 
 
 function save() {
-    
+
     localStorage.setItem('listCart', JSON.stringify(cart));
 }
-document.getElementById("quality").innerHTML=cart.length;
+// var sumItem=0;
+//     for(let i in cart){
+//         sum= sum +cart[i].quantity;
+//     }
+//     console.log(sum);
+// document.getElementById("quality").innerHTML=sumItem;
 function load() {
     cart = JSON.parse(localStorage.getItem('listCart'));
 }
 
-function displayCart(){
-    for(let i in cart){
-    var data = JSON.parse(JSON.stringify(cart[i]))  
-    var print = `<div class="cart-item cart-column">
-        <img class="cart-item-image" src="${data.img}" width="100" height="100">
+function displayCart() {
+    if (cart.length != []) {
+        var sumItem = 0;
+
+        for (let i in cart) {
+            sumItem = sumItem + cart[i].quantity;
+        }
+
+
+        document.getElementById("quality").innerHTML = sumItem;
+    }
+
+
+
+    for (let i in cart) {
+        var data = JSON.parse(JSON.stringify(cart[i]))
+        var print = `
+    <div class="cart-item">
+        <div class="card-img">
+            <img class="cart-item-image" src="${data.img}" width="100" height="100%">
+            
+        </div>
+
+        <div class="card-name">
         <span class="cart-item-title">${data.name}</span>
-    </div>
-    <span class="cart-price cart-column">${data.price}</span>
-    <div class="cart-quantity cart-column">
-        <input class="cart-quantity-input" type="number" value="1">
-        <button class="btn btn-danger" type="button" onclick="deleteItem(${i})" >REMOVE</button>
+        </div>
+
+        <div class="card-price">
+        <span class="cart-price cart-column">${data.price}</span>
+        </div>
+
+        <div class="card-quantity">
+            <input class="cart-quantity-input" type="number" width="10px" value="${data.quantity}">
+            
+        </div>
+        <div class="cart-total">
+        <span class = "cart-item-total"> ${data.total}">
+        </div>
+        <button class="btn btn-danger" id="removeBtn" type="button" onclick="deleteItem(${i})" >REMOVE</button>
+        
+        
     </div>`;
-    document.getElementById("carts").innerHTML += print;
+        document.getElementById("carts").innerHTML += print;
     }
 }
 
+//Xóa sản phẩm trong giỏ hàng
+var deleteItem = function(i) {
 
-var deleteItem= function(i){
-    cart.splice(i,1);
+
+    //nếu có nhiều sản phẩm thì trừ đi 1
+    if (cart[i].quantity != 1) {
+        cart[i].quantity = cart[i].quantity - 1;
+
+    } else {
+        //nếu không thì xóa ra khỏi mảng
+        cart.splice(i, 1);
+
+    }
     save();
     location.reload();
 
 
 }
-var listProductCart= function(){
-   
+var listProductCart = function() {
+
+}
+
+
+
+//Hàm tính tổng hóa đơn
+var order = function() {
+
+    if (cart.length != 0) {
+        let sum = 0;
+        for (let i in cart) {
+            sum = sum + (cart[i].price * cart[i].quantity);
+
+        }
+        // document.getElementById("cart-total").innerHTML = sum;
+        alert("Thank you for you order, your bill is: " + sum + " VND");
+        cart = [];
+        save();
+        location.reload();
+    } else {
+        alert("Don't have any product in your cart");
+    }
+
 }

@@ -1,28 +1,97 @@
-.tenGioHang {
-    color:black;
-    font-size: 25px;
-    /* background-color: antiquewhite; */
-    padding: 15px 60px 15px 10px;
-    margin: 0px 60px 0px 10px;
-    display: flex;
-    flex-direction: row; 
-}
-
-.bodyCart{
-    margin: 100px;
-    padding: 20px;
-}
-.menu-cart{
-    background-color: antiquewhite;
-    display: flex;
-    flex-direction: row; 
-    font-size: 20px;
-    padding: 15px 60px 15px 20px;
-    /* padding-left: 23px; */
+.table-cart {
+    /* width: 100%; */
+    margin: 100px 10px 10px 150px;
+    padding: 100px 10px 10px 100px;
+    width: 800px;
+    font-size: 28px;
     color: black;
-  
-}
-.menu-cart .imgCart, .nameCart, .totalCart, .priceCart, .quantityCart, .actionCart {
-    flex: 1.3;
+    background-color: yellow;
 }
 
+.cart-item {
+    margin-top: 5px;
+    padding-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.card-cart {
+    padding-left: 20px;
+}
+
+.name-customer {
+    display: contents;
+}
+
+.cart-total button {
+    color: black;
+    background-color: goldenrod;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 6px;
+    border-color: orange;
+    padding-bottom: 5px;
+    width: 100px;
+}
+
+.cart-total {
+    padding-bottom: 13px;
+    padding-left: 95px;
+    padding-top: 30px;
+}
+
+#btn-oder-customer {
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-left: 15px;
+    padding-top: 7px;
+    width: 230px;
+}
+
+
+/* .cart-quantity {
+    width: 70px;
+} */
+
+.carts {
+    /* margin-left: 25px;
+    padding-left: 30px; */
+    padding-left: 30px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    align-items: center;
+    font-size: 25px;
+    color: orange;
+}
+
+.orderbtn {
+    margin-left: 750px;
+    margin-top: 10px;
+}
+
+.title {
+    border-left: 1px solid black;
+}
+
+#removeBtn {
+    height: 50px;
+}
+
+.card-img {
+    margin-bottom: 5px;
+}
+
+.cart-name {
+    width: 250px;
+    border: 3px solid grey;
+}
+
+.cart-price {}
+
+.cart-quantity {}

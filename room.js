@@ -1,61 +1,61 @@
 var room=[
-    {
+{
     id: "room1",
     address : "Tầng 1",
     img : "imgsRoom/room1.jpg",
     status : "Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống.",
     price : 1400000
+ },
+ {
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room2.jpg", 
+    status : "Còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
+    price : 200000,
+ },
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room4.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
+    price:350000,
+},
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room4.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
+    price : 150000,
+},
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room5.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
+    price : 99000 ,
     },
-    {
-        id: "room1",
-        address : "Tầng 2 ",
-        img : "imgsRoom/room2.jpg", 
-        status : "Còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
-        price : 200000,
-        },
-        {
-            id: "room1",
-            address : "Tầng 2 ",
-            img : "imgsRoom/room4.jpg",
-            status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
-            price:350000,
-            },
-            {
-                id: "room1",
-                address : "Tầng 2 ",
-                img : "imgsRoom/room4.jpg",
-                status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
-                price : 150000,
-                },
-                {
-                    id: "room1",
-                    address : "Tầng 2 ",
-                    img : "imgsRoom/room5.jpg",
-                    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
-                    price : 99000 ,
-                    },
-                    {
-                        id: "room1",
-                        address : "Tầng 2 ",
-                        img : "imgsRoom/room6.jpg",
-                        status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",      
-                        price : 30000,
-                        },
-                        {
-                            id: "room1",
-                            address : "Tầng 2 ",
-                            img : "imgsRoom/room1.jpg",
-                            status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
-                          
-                            price : 100000,
-                            },
-                            {
-                                id: "room1",
-                                address : "Tầng 2 ",
-                                img : "imgsRoom/room1.jpg",
-                                status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống    ",
-                                price: 7500000,
-                                },                                                                                                        
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room6.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",      
+    price : 30000,
+},
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room1.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống",
+    
+    price : 100000,
+},
+{
+    id: "room1",
+    address : "Tầng 2 ",
+    img : "imgsRoom/room1.jpg",
+    status : "còn phòng Rỗng còn phòng Tọa lạc tại tầng 1 của khách sạn, gần ngay Cafe Gallery và khu vực hành lang, Lounge Bar là nơi thích hợp cùng một lúc tổ chức hội họp và ăn uống    ",
+    price: 7500000,
+},                                                                                                        
 ]
 function saveRoom() {
     localStorage.setItem('listRoom', JSON.stringify(room))
@@ -129,7 +129,19 @@ var getRoomVip = function(id) {
 }
 var cart=[];
 function saveCart(){
-    document.getElementById("quality").innerHTML=cart.length;
+    if(cart.length!=[]){
+        var sumItem=0;
+
+        for(let i in cart){
+            sumItem= sumItem +cart[i].quantity;
+        }
+        
+    
+        document.getElementById("quality").innerHTML=sumItem;
+    }
+        
+
+
     localStorage.setItem('listCart', JSON.stringify(cart));
 
 }

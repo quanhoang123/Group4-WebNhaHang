@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +15,8 @@
     <script src="./js/ie-emulation-modes-warning.js"></script>
     <link rel="stylesheet" href="card.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0"></script>
@@ -42,20 +44,22 @@
         new Wow().init();
     </script> -->
 </head>
+
 <body>
-    <header >      
+    <header>
         <div class="head">
-            <nav class="navbar navbar-expand-xl navbar-fixed-top "role="navigation"  >
+            <nav class="navbar navbar-expand-xl navbar-fixed-top " role="navigation">
                 <div class="container">
                     <div id="top-bar" class="header-top hide-for-sticky hide-for-medium">
                         <div class="flex-row container">
                             <div class="flex-col hide-for-medium float-left">
-                                <ul class="nav nav-left medium-nav-center nav-small  nav-divided" >
-                                    <li class="html custom html_topbar_left text-center" >
-                                        <span class="mona_html showroom"><a href=""> 101b Lê Hữu Trác, P.Phước Mỹ, Q.Sơn Trà, Tp.Da Nang</a></span>
+                                <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+                                    <li class="html custom html_topbar_left text-center">
+                                        <span class="mona_html showroom"><a href=""> 101b Lê Hữu Trác, P.Phước Mỹ, Q.Sơn
+                                                Trà, Tp.Da Nang</a></span>
                                         <span class="mona_html hotline"><a href="tel:0355739816">035 573 9816</a></span>
                                     </li>
-    
+
                                 </ul>
                             </div>
                         </div>
@@ -64,12 +68,13 @@
                         <img src="">
                         <a class="navbar-brand" href="">RESTAURANT</a>
                     </div>
-                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false" style="height: 1px;" >
+                    <div id="navbarCollapse" class="navbar-collapse collapse topNarbar" aria-expanded="false" style="height: 1px;">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="pageHome.html">Home</a></li>
                             <li><a href="#aboutus">About us</a></li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<span class="product"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<span
+                                        class="product"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="#">Sea Food</a></li>
                                     <li><a href="#">Jungle Food</a></li>
@@ -79,12 +84,14 @@
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li ><a href="" data-toggle="modal" data-target="#exampleModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>                   
-                            <li> <a href="" ><span class="glyphicon glyphicon-heart"></span></a></li>     
-                            <li onclick="addProductOnCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart"> </span>Card
+                            <li><a href="" data-toggle="modal" data-target="#exampleModal"><span
+                                        class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li> <a href=""><span class="glyphicon glyphicon-heart"></span></a></li>
+                            <li onclick="addProductOnCard()"><a href=""><span class="glyphicon glyphicon-shopping-cart">
+                                    </span>Card </a>
                                 <!-- <h3 id = "count" style="margin-left:45px; margin-top:-26px"></h3></a> -->
-                                <span id ="quality"></span>
-                            </li>                                   
+                                <span id="quality"></span>
+                            </li>
                         </ul>
                         <form class="navbar-form navbar-right" action="">
                             <div class="form-group">
@@ -93,31 +100,84 @@
                             <button type="submit" class="btn btn-default" onclick="searchProduct()">Search</button>
                         </form>
                     </div>
-                    
+
                 </div>
-            </nav>  
-        </div> 
-        
-    </header>
-    <body>
-       
-       <div class="bodyCart">
-            <div class="tenGioHang">Món ăn bạn đã thêm vào giỏ hàng</div>
-            <div class="menu-cart" >
-                <div class="imgCart">Hình ảnh</div>
-                <div class="nameCart">Sản phẩm</div>
-                <div class="priceCart" >Đơn giá</div>
-                <div class="quantityCart"> Số lượng</div>
-                <div class="totalCart">Tổng tiền</div>
-                <div class="actionCart">Thao tác</div>
-            </div>
+            </nav>
         </div>
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active row" id="carts">
+
+    </header>
+
+    <body>
+        <!-- <div class="tab-content">
+
+            <table class="table-cart">
+               
+               
+                 <tr class="cart-menu">
+                    
+                
+                    <th class="cart-menu-img">Product</th>
+                    <th class="cart-menu-product">Product</th>
+                    <th class="cart-menu-pricce">Price</th>
+                    <th class="cart-menu-quantity">Quantity</th>
+                    <th class="cart-menu-delete">Action</th>
+                   
+                </tr> -->
+
+        <div id="carts">
+            <div class="carts">
+                <div class="cart-img">Images</div>
+                <div class="cart-product">Products</div>
+                <div class="cart-price">Price</div>
+                <div class="cart-quantity">Quantity</div>
+                <div class="cart-option">Option</div>
+                <!-- <div id="cart-total">
+                    <button onclick="order()">Total money</button>
+                    </div> -->
 
             </div>
-          </div> 
-        
-    <script src="card.js"></script>
-</body>
+        </div>
+        <!-- <h2>Thông tin đặt hàng</h2> -->
+
+        <div class="cart-total">
+            <button onclick="order()">Total money</button>
+        </div>
+
+        <button type="button" class="btn btn-info btn-lg" id="btn-oder-customer" data-toggle="modal" data-target="#myModal">Xem thông tin đặt hàng</button>
+
+
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Thông tin đặt hàng</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="name-customer">
+                            <label for="label-name">Tên khách hàng</label>
+                            <p id="output-name">In ra tên</p>
+                        </div>
+                        <div class="phone-customer">
+                            <label for="label-phone">Số điện thoại</label>
+                            <p id="output-phone">In ra sdt</p>
+                        </div>
+                        <div class="address-customer">
+                            <label for="label-phone">Địa chỉ</label>
+                            <p id="output-phone">In ra địa chỉ</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="card.js"></script>
+    </body>
+
 </html>
