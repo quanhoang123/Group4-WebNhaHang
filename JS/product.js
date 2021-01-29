@@ -366,14 +366,13 @@ var count = 0;
 
 function addProduct123(i) {
 
-    var count = 0;
+   
 
     //count dùng để kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa
     if (cart.length == []) {
         //nếu giỏ hàng trống thì add sản phẩm trược tiếp r lưu sp
         let sanpham = JSON.parse(JSON.stringify(product[i]));
         cart.push(sanpham);
-        console.log(cart);
         alert("Thêm sản phẩm thành công");
         saveCart();
     }

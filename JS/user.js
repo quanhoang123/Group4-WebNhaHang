@@ -168,7 +168,7 @@ function signin() {
             document.getElementById("account").style.display = "none";
             document.getElementById("userAccount").innerHTML = newuser.name;
             b = true;
-            $('#exampleModal').modal('hide');
+            $('exampleModal').modal('hide');
             }      
             localStorage.setItem('loggedInUsers', JSON.stringify(user))
     }
