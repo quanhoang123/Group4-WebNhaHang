@@ -44,39 +44,22 @@ function displayCart() {
 
     for (let i in cart) {
         var data = JSON.parse(JSON.stringify(cart[i]))
+        console.log(data);
         var print = `
-    <div class="cart-item">
-        <div class="card-img">
-            <img class="cart-item-image" src="${data.img}" width="100" height="100%">
-            
-        </div>
-
-        <div class="card-name">
-        <span class="cart-item-title">${data.name}</span>
-        </div>
-
-        <div class="card-price">
-        <span class="cart-price cart-column">${data.price}</span>
-        </div>
-
-        <div class="card-quantity">
-            <input class="cart-quantity-input" type="number" width="10px" value="${data.quantity}">
-            
-        </div>
-        <div class="cart-total">
-        <span class = "cart-item-total"> ${data.total}">
-        </div>
-        <button class="btn btn-danger" id="removeBtn" type="button" onclick="deleteItem(${i})" >REMOVE</button>
-        
-        
-    </div>`;
-        document.getElementById("carts").innerHTML += print;
+        <tr>
+            <td><img src="${data.img}" width="150px" height="100px" style= "padding:15px"></td>
+            <td>${data.name}</td>
+            <td>${data.quantity}</td>
+            <td class ="cart-item-price">${data.price}</td>
+            <td class="cart-price cart-column">${parseInt(data.price * data.quantity)}</td>
+            <td><button class="btn btn-danger" id="removeBtn" type="button" onclick="deleteItem(${i})" >REMOVE</button></td>
+        </tr>`;
+        document.getElementById("showCarts").innerHTML += print;
     }
 }
 
 //Xóa sản phẩm trong giỏ hàng
 var deleteItem = function(i) {
-
 
     //nếu có nhiều sản phẩm thì trừ đi 1
     if (cart[i].quantity != 1) {
@@ -85,22 +68,15 @@ var deleteItem = function(i) {
     } else {
         //nếu không thì xóa ra khỏi mảng
         cart.splice(i, 1);
-
     }
     save();
     location.reload();
-
-
 }
 var listProductCart = function() {
 
-}
-
-
-
-//Hàm tính tổng hóa đơn
+    }
+    //Hàm tính tổng hóa đơn
 var order = function() {
-
     if (cart.length != 0) {
         let sum = 0;
         for (let i in cart) {
